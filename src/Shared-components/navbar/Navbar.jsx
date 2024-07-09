@@ -80,6 +80,15 @@ const Navbar = () => {
                 Home
               </Link>
             </li>
+            <li>
+              <Link
+                to="/contact"
+                onClick={handleLinkClick} // Close mobile nav on link click
+                className="py-7 px-3 inline-block hover:text-green-600 transition duration-300 ease-in-out transform hover:scale-105"
+              >
+                Contact
+              </Link>
+            </li>
             <NavLinks onClick={handleLinkClick} />{" "}
             {/* Pass handleLinkClick to NavLinks */}
             <div className="py-5">
