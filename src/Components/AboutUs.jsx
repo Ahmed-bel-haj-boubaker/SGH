@@ -1,28 +1,29 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Statistic from "../Shared-components/Statistic";
-
-// Dummy data for team members
+import logo from "../../public/images/Logo.png";
+import image from "../../public/images/testimonial/girl.png";
+import image2 from "../../public/images/desinsectisation.png";
 const teamMembers = [
   {
     name: "John Doe",
     role: "CEO",
-    image: "../../public/images/testimonial/girl.png",
+    image: image,
   },
   {
     name: "Jane Smith",
     role: "CTO",
-    image: "../../public/images/testimonial/girl.png",
+    image: image,
   },
   {
     name: "Alice Johnson",
     role: "Designer",
-    image: "../../public/images/testimonial/girl.png",
+    image: image,
   },
   {
     name: "Bob Brown",
     role: "Developer",
-    image: "../../public/images/testimonial/girl.png",
+    image: image,
   },
 ];
 
@@ -32,7 +33,7 @@ const AboutUs = () => {
       {/* Section 1: Logo and Text */}
       <section className="container mx-auto px-4 flex flex-col md:flex-row items-center mb-16">
         <img
-          src="../../public/images/Logo.png"
+          src={logo}
           alt="Logo"
           className="w-64 h-64  mb-6 md:mb-0 md:mr-6"
         />
@@ -76,54 +77,12 @@ const AboutUs = () => {
           </p>
         </motion.div>
         <img
-          src="../../public/images/desinsectisation.png"
+          src={image2}
           alt="Vision"
           className="w-full md:w-1/2 mb-6 md:mb-0 md:ml-6"
         />
       </section>
 
-      {/* Section 3: Company Statistics */}
-      {/* <section className="container mx-auto px-4 mb-16">
-        <h2 className="text-4xl font-bold text-center mb-12">Our Statistics</h2>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-          <motion.div
-            className="bg-white p-6 rounded-lg shadow-lg"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <h3 className="text-3xl font-bold mb-2">100+</h3>
-            <p className="text-gray-700">Clients</p>
-          </motion.div>
-          <motion.div
-            className="bg-white p-6 rounded-lg shadow-lg"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <h3 className="text-3xl font-bold mb-2">50+</h3>
-            <p className="text-gray-700">Projects</p>
-          </motion.div>
-          <motion.div
-            className="bg-white p-6 rounded-lg shadow-lg"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-          >
-            <h3 className="text-3xl font-bold mb-2">10+</h3>
-            <p className="text-gray-700">Awards</p>
-          </motion.div>
-          <motion.div
-            className="bg-white p-6 rounded-lg shadow-lg"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
-          >
-            <h3 className="text-3xl font-bold mb-2">5</h3>
-            <p className="text-gray-700">Years of Experience</p>
-          </motion.div>
-        </div>
-      </section> */}
       <Statistic />
       {/* Section 4: Our Team */}
       <section className="container mx-auto px-4 mb-16">

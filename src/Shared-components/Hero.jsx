@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import image from "../../public/images/desinsectisation.png";
 const Hero = () => {
   const fullText =
     "SGH est une société de nettoyage industriel offrant des services professionnels partout en Tunisie.";
@@ -45,7 +45,7 @@ const Hero = () => {
           </p>
         </div>
         <div className="lg:w-1/2 -mt-20 max-lg:-mt-1">
-          <img src="../../public/images/desinsectisation.png" alt="" />
+          <img src={image} alt="" />
         </div>
       </div>
     </section>
