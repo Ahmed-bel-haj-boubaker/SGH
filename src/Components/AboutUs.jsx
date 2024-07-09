@@ -45,17 +45,10 @@ const AboutUs = () => {
         >
           <h2 className="text-4xl font-bold mb-4">Qui nous sommes ? </h2>
           <p className="text-lg text-gray-700">
-            SGH est une Société de Nettoyage Industriel qui propose ses services
-            de nettoyage professionnels à toute le territoire de la Tunisie.
-            Pour vous aider à vous faire une meilleure idée des prestations de
-            nettoyage que nous proposons, voici une liste des différentes
-            opérations que nous réalisons pour nos clients. Notre société de
-            nettoyage attache une grande importance à l’image de vos locaux et
-            un vrai savoir-faire dans le secteur du nettoyage et le ménage pour
-            cela nous vous offrons des services de qualité et des prix
-            attractifs, par un nombre de sites partout au Tunisie, notre société
-            de nettoyage vous propose un contrat de nettoyage annuel et
-            d’intervention aux besoins .
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam odio
+            harum exercitationem, corporis doloremque ea! Necessitatibus
+            blanditiis dolorem, molestias vitae nam quisquam sit est ab ullam
+            perspiciatis iste molestiae harum!
           </p>
         </motion.div>
       </section>
@@ -72,8 +65,10 @@ const AboutUs = () => {
         >
           <h2 className="text-4xl font-bold mb-4">Notre vision</h2>
           <p className="text-lg text-gray-700">
-            We aim to be leaders in our field, continuously innovating and
-            improving our services to meet the needs of our clients.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
+            qui ipsam sit est. Laudantium eos maxime sapiente asperiores,
+            dolores fugiat recusandae culpa architecto commodi natus! Impedit
+            atque omnis eaque nisi.
           </p>
         </motion.div>
         <img
@@ -86,7 +81,7 @@ const AboutUs = () => {
       <Statistic />
       {/* Section 4: Our Team */}
       <section className="container mx-auto px-4 mb-16">
-        <h2 className="text-4xl font-bold text-center mb-12">Our Team</h2>
+        <h2 className="text-4xl font-bold text-center mb-12 mt-5">Notre équipe</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
           {teamMembers.map((member, index) => (
             <motion.div

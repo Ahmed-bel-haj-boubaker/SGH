@@ -15,7 +15,7 @@ export const links = [
     submenu: true,
     sublinks: [
       { Head: "Qui nous sommes ?", to: "/aboutus" },
-      { Head: "Nos points forts et nos valeurs", to: "/values" },
+      { Head: "Nos points forts et nos valeurs", to: "/nospointfort" },
     ],
   },
 ];

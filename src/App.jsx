@@ -8,6 +8,8 @@ import Désinsectisation from "./Pages/Services/Désinsectisation";
 import Jardinage from "./Pages/Services/Jardinage";
 import ServiceNetoyage from "./Pages/Services/ServiceNetoyage";
 import AboutUs from "./Components/AboutUs";
+import GoodPoints from "./Components/GoodPoints";
+import ContactUs from "./Components/contactUs";
 
 function App() {
   return (
@@ -74,6 +76,22 @@ function App() {
           element={
             <Layout>
               <AboutUs />
+            </Layout>
+          }
+        />
+        <Route
+          path="/nospointfort"
+          element={
+            <Layout>
+              <GoodPoints />
+            </Layout>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <Layout>
+              <ContactUs />
             </Layout>
           }
         />

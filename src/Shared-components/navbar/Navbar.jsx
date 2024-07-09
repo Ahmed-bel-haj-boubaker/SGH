@@ -4,12 +4,15 @@ import Logo from "../../../public/images/Logo.png";
 import Buttonn from "../Button/Button";
 import NavLinks from "./NavLinks";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhone, faFileAlt } from "@fortawesome/free-solid-svg-icons";
-import { Button, IconButton, Typography } from "@material-tailwind/react";
-import { Title } from "../CustomComponent";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+
+  // Function to handle link click and close mobile nav
+  const handleLinkClick = () => {
+    setOpen(false); // Close the mobile nav
+  };
 
   return (
     <>
@@ -29,15 +32,18 @@ const Navbar = () => {
             <li>
               <Link
                 to="/"
+                onClick={handleLinkClick} // Close mobile nav on link click
                 className="py-7 px-3 inline-block hover:text-green-600 transition duration-300 ease-in-out transform hover:scale-105"
               >
                 Home
               </Link>
             </li>
-            <NavLinks />
+            <NavLinks onClick={handleLinkClick} />{" "}
+            {/* Pass handleLinkClick to NavLinks */}
             <li>
               <Link
                 to="/contact"
+                onClick={handleLinkClick} // Close mobile nav on link click
                 className="py-7 px-3 inline-block hover:text-green-600 transition duration-300 ease-in-out transform hover:scale-105"
               >
                 Contact
@@ -68,12 +74,14 @@ const Navbar = () => {
             <li>
               <Link
                 to="/"
+                onClick={handleLinkClick} // Close mobile nav on link click
                 className="py-7 px-3 inline-block hover:text-green-600 transition duration-300 ease-in-out transform hover:scale-105"
               >
                 Home
               </Link>
             </li>
-            <NavLinks />
+            <NavLinks onClick={handleLinkClick} />{" "}
+            {/* Pass handleLinkClick to NavLinks */}
             <div className="py-5">
               <div className="">
                 <div className="flex justify-between gap-5 flex-col max-w-52">

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { links } from "./Mylinks";
 import { IoChevronForward } from "react-icons/io5";
 
-const NavLinks = () => {
+const NavLinks = ({ onClick }) => {
   const [heading, setHeading] = useState("");
   const [subHeading, setSubHeading] = useState("");
   return (
@@ -46,7 +46,7 @@ const NavLinks = () => {
                         <h1 className="text-lg font-semibold justify-start ">
                           {sublink.Head}
                         </h1>
-                        <IoChevronForward/>
+                        <IoChevronForward />
                       </Link>
                     ))}
                   </div>
@@ -68,7 +68,11 @@ const NavLinks = () => {
                     }
                     className="py-4 pl-7 font-semibold md:pr-0 pr-5 flex justify-between items-center md:pr-0 pr-5"
                   >
-                    <Link to={sublink.to} className="block px-7 py-2">
+                    <Link
+                      to={sublink.to}
+                      className="block px-7 py-2"
+                      onClick={onClick}
+                    >
                       {sublink.Head}
                     </Link>
                   </h1>
