@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import Statistic from "../Shared-components/Statistic";
 import logo from "../../public/images/Logo.png";
@@ -81,7 +80,9 @@ const AboutUs = () => {
       <Statistic />
       {/* Section 4: Our Team */}
       <section className="container mx-auto px-4 mb-16">
-        <h2 className="text-4xl font-bold text-center mb-12 mt-5">Notre équipe</h2>
+        <h2 className="text-4xl font-bold text-center mb-12 mt-5">
+          Notre équipe
+        </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
           {teamMembers.map((member, index) => (
             <motion.div

@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { Layout } from "./Shared-components/Layout";
 import Home from "./Components/Home";
 import DemandeDevis from "./Components/DemandeDevis";
@@ -10,10 +10,21 @@ import ServiceNetoyage from "./Pages/Services/ServiceNetoyage";
 import AboutUs from "./Components/AboutUs";
 import GoodPoints from "./Components/GoodPoints";
 import ContactUs from "./Components/contactUs";
+import { useEffect } from "react";
 
 function App() {
+  const ScrollToTop = () => {
+    const { pathname } = useLocation();
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
+
+    return null;
+  };
+
   return (
     <>
+      <ScrollToTop />
       <Routes>
         <Route
           path="/"

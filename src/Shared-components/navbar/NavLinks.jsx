@@ -41,9 +41,9 @@ const NavLinks = ({ onClick }) => {
                       <Link
                         key={index}
                         to={sublink.to}
-                        className="hover:text-green-600 flex items-center "
+                        className="hover:text-green-600 flex items-center font-[Poppins] "
                       >
-                        <h1 className="text-lg font-semibold justify-start ">
+                        <h1 className="text-lg  justify-start font-[Poppins]  ">
                           {sublink.Head}
                         </h1>
                         <IoChevronForward />
@@ -66,7 +66,7 @@ const NavLinks = ({ onClick }) => {
                         ? setSubHeading(sublink.Head)
                         : setSubHeading("")
                     }
-                    className="py-4 pl-7 font-semibold md:pr-0 pr-5 flex justify-between items-center md:pr-0 pr-5"
+                    className="py-4 pl-7  md:pr-0 pr-5 flex justify-between items-center md:pr-0 pr-5"
                   >
                     <Link
                       to={sublink.to}

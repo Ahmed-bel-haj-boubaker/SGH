@@ -14,11 +14,11 @@ const Hero = () => {
       } else {
         clearInterval(interval);
       }
-    }, 10); // Adjust the interval time to speed up or slow down the animation
+    }, 10);
 
     return () => clearInterval(interval);
   }, [fullText]);
-  console.log(displayedText);
+
   return (
     <section className="-mt-16 md:pt-40 max-lg:-mt-1 ">
       <div className="container mx-auto px-8 lg:flex">

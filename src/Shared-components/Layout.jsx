@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
         <Navbar />
         <main
           style={{ paddingTop: "140px", paddingBottom: "10px", zIndex: 0 }}
-          className="bg-slate-200"
+        
         >
           {children}
         </main>
