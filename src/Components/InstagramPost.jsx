@@ -1,4 +1,4 @@
-import image1 from "../../public/images/bf4697002a82.jpg";
+import image1 from "../../public/images/image.jpg";
 import image2 from "../../public/images/banner_outils_de_jardinage_fr_vonroc_280224.jpg";
 import image3 from "../../public/images/desinfection-2.jpg";
 import image4 from "../../public/images/desinsectisation.png";
@@ -52,7 +52,7 @@ export const instagramPosts = [
 
 const InstagramPost = () => {
   return (
-    <div>
+    <div className="bg-white ">
       <section className="post grid-cols-1 grid md:grid-cols-3 lg:grid-cols-6">
         {instagramPosts.map((instagramPost, index) => (
           <div key={index}>

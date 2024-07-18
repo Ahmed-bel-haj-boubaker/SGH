@@ -5,6 +5,8 @@ import InstagramPost from "./InstagramPost";
 import Hero from "../Shared-components/Hero";
 import Statistic from "../Shared-components/Statistic";
 import Team from "../Shared-components/Team";
+import HeroSection from "./HeroSection";
+import Securite from "./Securite";
 
 const Home = () => {
   return (
@@ -12,12 +14,17 @@ const Home = () => {
       <div>
         <Hero />
         <Statistic />
+        <HeroSection />
       </div>
+    
       <div className="relative overflow-hidden">
         <Testimonials />
-        <Team />
-        <InstagramPost />
       </div>
+      <div className="bg-white">
+        <Securite />
+      </div>
+      <Team />
+      <InstagramPost />
     </>
   );
 };

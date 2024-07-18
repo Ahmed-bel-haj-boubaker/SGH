@@ -1,5 +1,7 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useEffect, useState } from "react";
 import image from "../../public/images/desinsectisation.png";
+import { Link } from "react-router-dom";
 const Hero = () => {
   const fullText =
     "SGH est une société de nettoyage industriel offrant des services professionnels partout en Tunisie.";
@@ -40,7 +42,7 @@ const Hero = () => {
          font-[poppins]
         "
             >
-              Service
+              <Link to="/demandeDevis">Demande de devis</Link>
             </button>
           </p>
         </div>

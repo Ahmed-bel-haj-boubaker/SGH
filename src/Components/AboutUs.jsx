@@ -6,9 +6,9 @@ import Team from "../Shared-components/Team";
 
 const AboutUs = () => {
   return (
-    <div className="bg-white py-20">
+    <div className=" py-20">
       {/* Section 1: Logo and Text */}
-      <section className="container mx-auto px-4 flex flex-col md:flex-row items-center mb-16">
+      <section className="container mx-auto px-4 flex flex-col md:flex-row items-center mb-16 ">
         <img
           src={logo}
           alt="Logo"

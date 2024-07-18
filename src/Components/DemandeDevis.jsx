@@ -5,6 +5,8 @@ import {
   DEMANDE_DEVIS_TEMPLATE,
   EMAIL_USER_ID,
 } from "../Config";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const DemandeDevis = () => {
   const [formData, setFormData] = useState({
@@ -17,6 +19,14 @@ const DemandeDevis = () => {
     telephone: "",
     service: "",
   });
+
+  const toastOptions = {
+    position: "bottom-right",
+    autoClose: 2000,
+    pauseOnHover: true,
+    draggable: true,
+    theme: "dark",
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -42,12 +52,14 @@ const DemandeDevis = () => {
           codePostal: formData.codePostal,
           telephone: formData.telephone,
           service: formData.service,
+          from_name: `${formData.nom} ${formData.prenom}`,
         },
         EMAIL_USER_ID
       )
       .then((response) => {
         console.log("SUCCESS!", response.status, response.text);
-        alert("Message sent successfully!");
+
+        toast.success("Message envoyer avec avec succès!", toastOptions);
         setFormData({
           nom: "",
           prenom: "",
@@ -61,123 +73,48 @@ const DemandeDevis = () => {
       })
       .catch((err) => {
         console.log("FAILED...", err);
-        alert("Failed to send message. Please try again.");
+        toast.error(
+          "Échec de l'envoi du message. Veuillez réessayer.",
+          toastOptions
+        );
       });
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen -mt-32 -mb-10 max-lg:m-2 max-lg:mb-3 max-lg:mt-2">
-      <div className="bg-white rounded-lg shadow-lg p-8 md:w-2/3 lg:w-1/2 xl:w-1/3 border border-primary">
-        <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r  p-4">
+      <ToastContainer />
+
+      <div className="bg-white rounded-lg shadow-2xl p-8 w-full max-w-lg border border-primary">
+        <h2 className="text-4xl font-extrabold text-gray-800 mb-8 text-center">
           Demande de devis
         </h2>
         <form className="space-y-6" onSubmit={handleSubmit}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="relative">
-              <label htmlFor="prenom" className="text-gray-700 font-medium">
-                Prénom:
-              </label>
-              <input
-                type="text"
-                id="prenom"
-                name="prenom"
-                className="w-full mt-2 px-4 py-3 border-b-2 border-primary focus:outline-none transition duration-300 placeholder-gray-400 transform hover:scale-105"
-                placeholder="Entrez votre prénom"
-                value={formData.prenom}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            <div className="relative">
-              <label htmlFor="nom" className="text-gray-700 font-medium">
-                Nom:
-              </label>
-              <input
-                type="text"
-                id="nom"
-                name="nom"
-                className="w-full mt-2 px-4 py-3 border-b-2 border-primary focus:outline-none transition duration-300 placeholder-gray-400 transform hover:scale-105"
-                placeholder="Entrez votre nom"
-                value={formData.nom}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            <div className="relative">
-              <label htmlFor="email" className="text-gray-700 font-medium">
-                Email:
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                className="w-full mt-2 px-4 py-3 border-b-2 border-primary focus:outline-none transition duration-300 placeholder-gray-400 transform hover:scale-105"
-                placeholder="Entrez votre email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            <div className="relative">
-              <label htmlFor="adresse" className="text-gray-700 font-medium">
-                Adresse:
-              </label>
-              <input
-                type="text"
-                id="adresse"
-                name="adresse"
-                className="w-full mt-2 px-4 py-3 border-b-2 border-primary focus:outline-none transition duration-300 placeholder-gray-400 transform hover:scale-105"
-                placeholder="Entrez votre adresse"
-                value={formData.adresse}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            <div className="relative">
-              <label htmlFor="ville" className="text-gray-700 font-medium">
-                Ville:
-              </label>
-              <input
-                type="text"
-                id="ville"
-                name="ville"
-                className="w-full mt-2 px-4 py-3 border-b-2 border-primary focus:outline-none transition duration-300 placeholder-gray-400 transform hover:scale-105"
-                placeholder="Entrez votre ville"
-                value={formData.ville}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            <div className="relative">
-              <label htmlFor="codePostal" className="text-gray-700 font-medium">
-                Code Postal:
-              </label>
-              <input
-                type="text"
-                id="codePostal"
-                name="codePostal"
-                className="w-full mt-2 px-4 py-3 border-b-2 border-primary focus:outline-none focus:border-primary transition duration-300 placeholder-gray-400 transform hover:scale-105"
-                placeholder="Entrez votre code postal"
-                value={formData.codePostal}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            <div className="relative">
-              <label htmlFor="telephone" className="text-gray-700 font-medium">
-                Téléphone:
-              </label>
-              <input
-                type="tel"
-                id="telephone"
-                name="telephone"
-                className="w-full mt-2 px-4 py-3 border-b-2 border-primary focus:outline-none transition duration-300 transform hover:scale-105 placeholder-gray-400"
-                placeholder="Entrez votre numéro de téléphone"
-                value={formData.telephone}
-                onChange={handleChange}
-                required
-              />
-            </div>
+            {[
+              { id: "prenom", label: "Prénom", type: "text" },
+              { id: "nom", label: "Nom", type: "text" },
+              { id: "email", label: "Email", type: "email" },
+              { id: "adresse", label: "Adresse", type: "text" },
+              { id: "ville", label: "Ville", type: "text" },
+              { id: "codePostal", label: "Code Postal", type: "text" },
+              { id: "telephone", label: "Téléphone", type: "tel" },
+            ].map(({ id, label, type }) => (
+              <div key={id} className="relative">
+                <label htmlFor={id} className="text-gray-700 font-medium">
+                  {label}:
+                </label>
+                <input
+                  type={type}
+                  id={id}
+                  name={id}
+                  className="w-full mt-2 px-4 py-3 border-2 rounded-lg border-gray-300 focus:border-primary focus:outline-none transition duration-300 placeholder-gray-400"
+                  placeholder={`Entrez votre ${label.toLowerCase()}`}
+                  value={formData[id]}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            ))}
           </div>
           <div className="relative">
             <label htmlFor="service" className="text-gray-700 font-medium">
@@ -186,7 +123,7 @@ const DemandeDevis = () => {
             <select
               id="service"
               name="service"
-              className="w-full mt-2 px-4 py-3 border-b-2 border-primary focus:outline-none transition duration-300 transform hover:scale-105 placeholder-gray-400"
+              className="w-full mt-2 px-4 py-3 border-2 rounded-lg border-gray-300 focus:border-primary focus:outline-none transition duration-300 placeholder-gray-400"
               value={formData.service}
               onChange={handleChange}
               required
@@ -204,7 +141,7 @@ const DemandeDevis = () => {
 
           <button
             type="submit"
-            className="w-full bg-primary hover:bg-primary text-white font-bold py-3 px-6 rounded-full shadow-md transition duration-300 transform hover:scale-105 mt-6"
+            className="w-full bg-primary hover:bg-primary-dark text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-105 mt-6"
           >
             Envoyer
           </button>

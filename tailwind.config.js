@@ -12,7 +12,7 @@ export default {
         "white-100": "#F3F3F3",
       },
       backgroundImage: {
-        Hero: "url('assets/cc.png')",
+        Hero: "url('public/images/cc.png')",
       },
       backgroundSize: {
         "100%": "100%",

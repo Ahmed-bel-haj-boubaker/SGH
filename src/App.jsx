@@ -11,6 +11,7 @@ import AboutUs from "./Components/AboutUs";
 import GoodPoints from "./Components/GoodPoints";
 import ContactUs from "./Components/contactUs";
 import { useEffect } from "react";
+import ChatBot from "./Pages/Chatbot/ChatBot";
 
 function App() {
   const ScrollToTop = () => {
@@ -24,6 +25,7 @@ function App() {
 
   return (
     <>
+      <ChatBot />
       <ScrollToTop />
       <Routes>
         <Route

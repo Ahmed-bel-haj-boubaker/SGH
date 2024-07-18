@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useState, useEffect } from "react";
 
 const Statistic = () => {
@@ -26,7 +27,7 @@ const Statistic = () => {
 
   return (
     <div>
-      <div className="bg-gray-50 py-16 pt-32">
+      <div className="bg-white py-16 pt-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
@@ -40,7 +41,7 @@ const Statistic = () => {
         </div>
         <div className="mt-10 pb-1">
           <div className="relative">
-            <div className="absolute inset-0 h-1/2 bg-gray-50"></div>
+            <div className="absolute inset-0 h-1/2 bg-white"></div>
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="max-w-4xl mx-auto">
                 <dl className="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3">
