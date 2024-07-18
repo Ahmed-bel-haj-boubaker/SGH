@@ -4,6 +4,7 @@ import Testimonials from "./Testimonials";
 import InstagramPost from "./InstagramPost";
 import Hero from "../Shared-components/Hero";
 import Statistic from "../Shared-components/Statistic";
+import Team from "../Shared-components/Team";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       </div>
       <div className="relative overflow-hidden">
         <Testimonials />
+        <Team />
         <InstagramPost />
       </div>
     </>

@@ -25,22 +25,26 @@ const ContactUs = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Send email to sender (auto-reply)
-    emailjs.send(
-      "service_a18f886", // Replace with your EmailJS service ID
-      "template_nzpezdl", // Replace with your auto-reply template ID
-      {
-        to_email: formData.email,
-        from_name: "aziz",
-        message_html: `Dear ${formData.name},\n\nThank you for contacting us! We have received your message and will get back to you as soon as possible.\n\nBest Regards,\nYour Name`,
-      },
-      "dso5aheejXGFbLnws" // Replace with your EmailJS user ID
-    );
+    // emailjs.send(
+    //   "service_a18f886", // Replace with your EmailJS service ID
+    //   "template_nzpezdl", // Replace with your auto-reply template ID
+    //   {
+    //     to_email: formData.email,
+    //     from_name: "SGH",
+    //     user_name: formData.name,
+    //   },
+    //   "dso5aheejXGFbLnws" // Replace with your EmailJS user ID
+    // );
 
     emailjs
       .send(
         "service_a18f886", // Replace with your EmailJS service ID
         "template_rtho1yb", // Replace with your EmailJS template ID
-        formData,
+        {
+          user_email: formData.email,
+          user_name: formData.name,
+          message: formData.message,
+        },
         "dso5aheejXGFbLnws" // Replace with your EmailJS user ID
       )
       .then((response) => {

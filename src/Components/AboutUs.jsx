@@ -1,30 +1,8 @@
 import { motion } from "framer-motion";
 import Statistic from "../Shared-components/Statistic";
 import logo from "../../public/images/Logo.png";
-import image from "../../public/images/testimonial/girl.png";
 import image2 from "../../public/images/desinsectisation.png";
-const teamMembers = [
-  {
-    name: "John Doe",
-    role: "CEO",
-    image: image,
-  },
-  {
-    name: "Jane Smith",
-    role: "CTO",
-    image: image,
-  },
-  {
-    name: "Alice Johnson",
-    role: "Designer",
-    image: image,
-  },
-  {
-    name: "Bob Brown",
-    role: "Developer",
-    image: image,
-  },
-];
+import Team from "../Shared-components/Team";
 
 const AboutUs = () => {
   return (
@@ -78,33 +56,8 @@ const AboutUs = () => {
       </section>
 
       <Statistic />
-      {/* Section 4: Our Team */}
-      <section className="container mx-auto px-4 mb-16">
-        <h2 className="text-4xl font-bold text-center mb-12 mt-5">
-          Notre équipe
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
-          {teamMembers.map((member, index) => (
-            <motion.div
-              key={index}
-              className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 * index }}
-            >
-              <img
-                src={member.image}
-                alt={member.name}
-                className="w-full h-56 object-cover"
-              />
-              <div className="p-6">
-                <h2 className="text-2xl font-semibold mb-2">{member.name}</h2>
-                <p className="text-gray-600">{member.role}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </section>
+
+      <Team />
     </div>
   );
 };
