@@ -3,6 +3,7 @@ import { BodyOne, Caption, CustomLink, Title } from "./CustomComponent";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faFileAlt } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { FaMapMarkerAlt, FaEnvelope, FaPhone, FaFax } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -12,10 +13,22 @@ const Footer = () => {
           <img src={Logo} alt="" className="h-56 w-56" />
           <div>
             <div className="flex flex-col gap-2 mt-3 font-[Poppins]">
-              <Caption>Adresse: Turki 8030 grombalia GP1</Caption>
-              <Caption>Email: sgh.ibtissem@gmail.com</Caption>
-              <Caption>GSM: 26 26 00 74 - 58 70 49 09</Caption>
-              <Caption>Tél/Fax : 72 21 41 52</Caption>
+              <Caption>
+                <FaMapMarkerAlt className="inline-block mr-2" />
+                Adresse: Turki 8030 grombalia GP1
+              </Caption>
+              <Caption>
+                <FaEnvelope className="inline-block mr-2" />
+                Email: sgh.ibtissem@gmail.com
+              </Caption>
+              <Caption>
+                <FaPhone className="inline-block mr-2" />
+                GSM: 26 26 00 74 - 58 70 49 09
+              </Caption>
+              <Caption>
+                <FaFax className="inline-block mr-2" />
+                Tél/Fax : 72 21 41 52
+              </Caption>
             </div>
             <br />
             <BodyOne>Abonnez-vous à notre newsletter</BodyOne>

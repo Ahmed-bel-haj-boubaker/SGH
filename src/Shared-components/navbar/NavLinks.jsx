@@ -10,7 +10,7 @@ const NavLinks = ({ onClick }) => {
     <>
       {links.map((link, index) => (
         <div key={index}>
-          <div className="px-3 text-left md:cursor-pointer group">
+          <div className="px-3 text-left md:cursor-pointer relative group">
             <h1
               className="py-7 flex justify-between items-center md:pr-0 pr-5 group"
               onClick={() => {
@@ -18,35 +18,37 @@ const NavLinks = ({ onClick }) => {
                 setSubHeading("");
               }}
             >
+              <span className="absolute top-0 bottom-0 w-full h-[5px] bg-[#8CC53F] scale-x-0 origin-left transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
+
               {link.name}
+
+              {/* Chevron Icon */}
               <span className="text-xl md:hidden inline">
                 <ion-icon
-                  name={`${
-                    heading === link.name ? "chevron-up" : "chevron-down"
-                  }`}
+                  name={heading === link.name ? "chevron-up" : "chevron-down"}
                 ></ion-icon>
               </span>
-              <span className="text-xl md:mt-1 md:ml-2 md:block hidden group-hover:rotate-180 group-hover:-mt-2">
+              <span className="text-xl hidden md:block transition-transform duration-300 ease-in-out group-hover:rotate-180">
                 <ion-icon name="chevron-down"></ion-icon>
               </span>
             </h1>
             {link.submenu && (
-              <div>
-                <div className="absolute top-20 hidden group-hover:md:block hover:md:block">
+              <div className="relative w-full">
+                <div className="absolute top-full left-0 mt-1 hidden group-hover:block bg-[#F9F9F9] border border-[#E5E7EB] shadow-lg rounded-lg">
                   <div className="py-3">
-                    <div className="w-4 h-4 left-3 absolute mt-1 bg-white rotate-45"></div>
+                    <div className="w-4 h-4 left-3 absolute -top-2 bg-[#F9F9F9] rotate-45 border-t border-l border-[#E5E7EB]"></div>
                   </div>
-                  <div className="bg-white p-5 grid gap-10  ">
+                  <div className="p-5 grid gap-4">
                     {link.sublinks.map((sublink, index) => (
                       <Link
                         key={index}
                         to={sublink.to}
-                        className="hover:text-green-600 flex items-center font-[Poppins] "
+                        className="flex items-center py-2 px-4 rounded-lg hover:bg-[#E5E7EB] transition duration-300 ease-in-out w-96"
                       >
-                        <h1 className="text-lg  justify-start font-[Poppins]  ">
+                        <h1 className="text-lg text-gray-800 font-[Poppins] flex-grow">
                           {sublink.Head}
                         </h1>
-                        <IoChevronForward />
+                        <IoChevronForward className="text-[#4B5563]" />
                       </Link>
                     ))}
                   </div>

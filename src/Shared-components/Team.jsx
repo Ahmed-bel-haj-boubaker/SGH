@@ -1,33 +1,59 @@
+import { Link } from "react-router-dom";
 import image from "../../public/images/testimonial/girl.png";
 import { motion } from "framer-motion";
+import deratisation from "../../public/images/deratisation-saint-cloud-2.jpg";
+import Désinsectisation from "../../public/images/desinsectisation.png";
+import Jardinage from "../../public/images/jardinage-domicile-clean-2.jpg";
+import Désinfection from "../../public/images/desinfection.png";
+import ServiceNetoyage from "../../public/images/Nettoyage-bureau.jpg";
+import { useState } from "react";
 
 const teamMembers = [
   {
-    name: "John Doe",
-    role: "CEO",
-    image: image,
+    name: "Dératisation",
+    role: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam omnis cum magnam laudantium. Ducimus vero suscipit, nisi dolorem quos officiis tenetur voluptas harum, esse obcaecati natus, autem iusto totam quasi.",
+    image: deratisation,
+    to: "/Dératisation",
   },
   {
-    name: "Jane Smith",
-    role: "CTO",
-    image: image,
+    name: "Désinsectisation",
+    role: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam omnis cum magnam laudantium. Ducimus vero suscipit, nisi dolorem quos officiis tenetur voluptas harum, esse obcaecati natus, autem iusto totam quasi.",
+    image: Désinsectisation,
+    to: "/Désinsectisation",
   },
   {
-    name: "Alice Johnson",
-    role: "Designer",
-    image: image,
+    name: "Désinfection",
+    role: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam omnis cum magnam laudantium. Ducimus vero suscipit, nisi dolorem quos officiis tenetur voluptas harum, esse obcaecati natus, autem iusto totam quasi.",
+    image: Désinfection,
+    to: "/Désinfection",
+  },
+  {
+    name: "Jardinage",
+    role: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam omnis cum magnam laudantium. Ducimus vero suscipit, nisi dolorem quos officiis tenetur voluptas harum, esse obcaecati natus, autem iusto totam quasi.",
+    image: Jardinage,
+    to: "/Jardinage",
+  },
+
+  {
+    name: "Service de Netoyage",
+    role: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam omnis cum magnam laudantium. Ducimus vero suscipit, nisi dolorem quos officiis tenetur voluptas harum, esse obcaecati natus, autem iusto totam quasi.",
+    image: ServiceNetoyage,
+    to: "/ServiceNetoyage",
   },
 ];
 
 const Team = () => {
+  const [showAll, setShowAll] = useState(false);
+
+  const displayedMembers = showAll ? teamMembers : teamMembers.slice(0, 3);
   return (
     <div className="bg-gray-50 mb-6">
       <section className="container mx-auto px-4 mb-16 flex flex-col items-center">
         <h2 className="text-4xl font-bold text-center mb-12 mt-5">
-          Notre équipe
+          Nos Services
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-10 w-full">
-          {teamMembers.map((member, index) => (
+          {displayedMembers.map((member, index) => (
             <motion.div
               key={index}
               className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300"
@@ -42,13 +68,21 @@ const Team = () => {
               />
               <div className="p-6">
                 <h2 className="text-xl sm:text-2xl font-semibold mb-2">
-                  {member.name}
+                  <Link to={member.to}>{member.name}</Link>
                 </h2>
                 <p className="text-gray-600">{member.role}</p>
               </div>
             </motion.div>
           ))}
         </div>
+        {teamMembers.length > 3 && (
+          <button
+            className="mt-8 px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
+            onClick={() => setShowAll(!showAll)}
+          >
+            {showAll ? "Voir moins" : "Voir plus"}
+          </button>
+        )}
       </section>
     </div>
   );
