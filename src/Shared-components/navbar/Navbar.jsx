@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import Logo from "../../../public/images/Logo.png";
 import Buttonn from "../Button/Button";
 import NavLinks from "./NavLinks";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhone } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -16,7 +14,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-gray-50 fixed top-0 left-0 w-full z-50 shadow-md h-40 justify-center items-center max-lg:h-28 md:w-screen">
+      <nav className="bg-gray-50 fixed top-0 left-0 w-full z-50 shadow-lg h-40 justify-center items-center max-lg:h-28 md:w-screen">
         <div className="bg-black max-lg:hidden text-white text-center font-poppins ">
           <h1>Société Générale d'Hygiène</h1>
         </div>
@@ -46,7 +44,17 @@ const Navbar = () => {
                 Accueil
               </Link>
             </li>
+            <li className="relative group ">
+              <span className="absolute left-0  w-full h-[5px] bg-[#8CC53F] scale-x-0 origin-left transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
 
+              <Link
+                to="/aboutus"
+                onClick={handleLinkClick}
+                className="py-7 px-3 inline-block hover:text-[#8CC53F] transition duration-300 ease-in-out transform hover:scale-105"
+              >
+                Présentation
+              </Link>
+            </li>
             <NavLinks onClick={handleLinkClick} />
             <li className="relative group ">
               <span className="absolute   w-full h-[5px] bg-[#8CC53F] scale-x-0 origin-left transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
@@ -68,8 +76,8 @@ const Navbar = () => {
           {/* Mobile nav */}
           <ul
             className={`
-              md:hidden bg-gray-100 fixed w-full top-28 overflow-y-auto bottom-0 py-24 pl-4 font-[Poppins] 
-              duration-500 ${open ? "-left-24" : "left-[-120%]"} 
+              md:hidden bg-gray-100 fixed w-full top-28 overflow-y-auto bottom-0 py-5 pl-4 font-[Poppins] 
+              duration-500 ${open ? "-left-24" : "left-[-150%]"} 
             `}
           >
             <li>
@@ -78,9 +86,18 @@ const Navbar = () => {
                 onClick={handleLinkClick}
                 className="py-7 px-3 inline-block hover:text-[#8CC53F] transition duration-300 ease-in-out transform hover:scale-105"
               >
-                Home
+                Accueil
               </Link>
             </li>
+            <li>
+              <Link
+                to="/aboutus"
+                onClick={handleLinkClick}
+                className="py-7 px-3 inline-block hover:text-[#8CC53F] transition duration-300 ease-in-out transform hover:scale-105"
+              >
+                Présentation
+              </Link>
+            </li>{" "}
             <li>
               <Link
                 to="/contact"
@@ -93,7 +110,7 @@ const Navbar = () => {
             <NavLinks onClick={handleLinkClick} />
             <div className="py-5">
               <div className="">
-                <div className="flex justify-between gap-5 flex-col max-w-52">
+                <div className="flex justify-between gap-5 flex-col max-w-52 max-lg:ml-14">
                   <Buttonn />
                 </div>
               </div>

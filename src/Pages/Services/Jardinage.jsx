@@ -1,90 +1,236 @@
 /* eslint-disable react/no-unescaped-entities */
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import image1 from "../../../public/images/jardinage.jpg";
+
 import image2 from "../../../public/images/jardinage-domicile-clean-2.jpg";
+import image1 from "../../../public/images/jardinage.jpg";
+import Pelouse from "../../../public/images/Pelouse.jpg";
+import Ramassage from "../../../public/images/Ramassage.jpg";
 
+import { useState } from "react";
+import { FaPlus, FaMinus, FaCheck } from "react-icons/fa";
+import Contact from "../../Shared-components/Contact";
+
+import { Link } from "react-router-dom";
+import SliderAnimated from "../../Shared-components/SliderAnimated";
+import FeaturesSection from "../../Shared-components/FeaturesSection";
 const Jardinage = () => {
+  const [openSection, setOpenSection] = useState(null);
+
+  const toggleSection = (section) => {
+    setOpenSection(openSection === section ? null : section);
+  };
+
   return (
-    <section className="bg-gradient-to-r from-green-500 to-green-700 py-16">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-5xl font-extrabold text-white">
-            TRAVAUX DE JARDINAGE
-          </h2>
-          <p className="text-white text-xl mt-4">
-            Conseil & assistance pour un jardin magnifique
+    <div>
+      {/* Hero Section */}
+      <section
+        className="relative bg-cover bg-center h-[500px] flex items-center justify-center text-center text-white"
+        style={{ backgroundImage: `url(${image1})` }}
+      >
+        <div className="absolute inset-0 bg-black opacity-60"></div>
+        <div className="relative z-10 px-6 py-8 max-w-lg mx-auto">
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
+            Votre Partenaire en Jardinage
+          </h1>
+          <p className="text-lg md:text-xl mb-6">
+            Experts en Jardinage à travers toute la Tunisie
           </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
-            className="bg-white p-6 rounded-lg shadow-lg transform transition duration-300"
+          <a
+            href="#services"
+            className="bg-yellow-400 text-gray-800 px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-yellow-500 transition duration-300"
           >
-            <img
-              src={image1}
-              alt="Jardinage Services"
-              className="w-full h-64 object-cover rounded-lg mb-4"
-            />
-            <h4 className="text-2xl font-bold text-gray-800 mt-4">
-              Services complets
-            </h4>
-            <ul className="list-disc text-gray-700 mt-4 space-y-2 pl-5">
-              <li>Désherbage</li>
-              <li>Scarification de votre pelouse</li>
-              <li>Tonte de gazon</li>
-              <li>Taille des arbustes</li>
-              <li>Taille de haies</li>
-              <li>Taille de petits arbres fruitiers</li>
-              <li>Ramassage de feuilles</li>
-              <li>Passage du nettoyeur haute pression</li>
-              <li>Entretien des espaces verts</li>
-            </ul>
-          </motion.div>
-
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
-            className="bg-white p-6 rounded-lg shadow-lg transform transition duration-300"
-          >
-            <img
-              src={image2}
-              alt="Jardinage Expertise"
-              className="w-full h-64 object-cover rounded-lg mb-4"
-            />
-            <h4 className="text-2xl font-bold text-gray-800 mt-4">
-              Expertise & professionnalisme
-            </h4>
-            <p className="text-gray-700 mt-4">
-              Chaque jardin mérite un entretien régulier et doit être réalisé
-              par des professionnels. Toutes nos équipes de SGH ont les
-              formations nécessaires pour prendre les bonnes décisions au bon
-              moment.
-            </p>
-          </motion.div>
+            <Link to={"/demandeDevis"}> Devis gratuit</Link>
+          </a>
         </div>
+      </section>
+      <div className="flex min-h-screen items-center justify-center bg-gray-100 py-16 font-poppins ">
+        <div className="flex ">
+          {/* Contact Component */}
+          <div className="max-lg:hidden ml-20  max-md:hidden ipad-pro:hidden  ">
+            <Contact />
+          </div>{" "}
+          {/* Information Section */}
+          <section className=" bg-white shadow-md rounded-lg py-8 px-6  lg:mr-20  ipad-pro:ml-32">
+            <div className=" mx-auto">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-12">
+                SGH - Votre Expert en Jardinage
+              </h2>
 
-        <div className="text-center mt-16">
-          <h3 className="text-4xl font-extrabold text-white mb-4">
-            CONTRAT D'ENTRETIEN ANNUEL
-          </h3>
-          <p className="text-white text-xl mb-4">
-            Profitez d'un jardin bien entretenu tout au long de l'année et sans
-            contrainte. Nous vous proposons des entretiens réguliers (Tonte,
-            taille, scarification, désherbage,…) ou encore des interventions
-            ponctuelles dans le cadre de remise en état de jardin.
-          </p>
-          <Link
-            to="/demandeDevis"
-            className="bg-white hover:bg-gray-100 text-green-700 font-bold py-3 px-6 rounded-md shadow-md transition duration-300"
-          >
-            Demandez un devis gratuit
-          </Link>
+              <div className="flex flex-row-reverse  gap-4 max-lg:flex-col ">
+                <img
+                  src={image1}
+                  alt=""
+                  className="rounded-3xl size-56  max-lg:w-full"
+                />
+                <p className="text-lg md:text-xl text-gray-700 mb-6">
+                  Chaque jardin mérite un entretien régulier et doit être
+                  réalisé par des professionnels. Toutes nos équipes de SGH ont
+                  les formations nécessaires pour prendre les bonnes décisions
+                  au bon moment. <br />
+                  Nous disposons d’un éventail de matériel complet de la très
+                  grosse tendeuse à la simple bêche. En fonction des besoins du
+                  jardin nous avons les moyens humains et matériels de réagir
+                  vite et dans de bonnes conditions.
+                </p>
+              </div>
+
+              <p className="text-lg md:text-xl text-gray-700 mb-6">
+                Nous disposons d’une équipe d’agents d’entretien hautement
+                qualifiés et équipés pour aérer vos locaux, évacuer les odeurs
+                désagréables, vider vos poubelles, remplacer les sacs,
+                épousseter votre mobilier, enlever les toiles d’araignées, et
+                nettoyer vos sols. Évidemment, nos prestations s’adaptent à vos
+                besoins.
+              </p>
+              <div className="mb-8 bg-white shadow-lg rounded-lg overflow-hidden">
+                <h3
+                  className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 flex items-center cursor-pointer bg-gray-200 p-4 rounded-t-lg hover:bg-gray-300 transition-colors duration-300"
+                  onClick={() => toggleSection("Pelouse")}
+                >
+                  <span className="mr-2 text-yellow-500">
+                    {openSection === "Pelouse" ? <FaMinus /> : <FaPlus />}
+                  </span>
+                  Pelouse
+                </h3>
+                <div
+                  className={`transition-max-height duration-500 ease-in-out overflow-hidden ${
+                    openSection === "Pelouse" ? "max-h-screen p-4" : "max-h-0"
+                  }`}
+                >
+                  {openSection === "Pelouse" && (
+                    <div className="flex flex-col lg:flex-row gap-9 items-center max-lg:flex-col-reverse  lg:justify-between">
+                      <ul className="flex flex-col pl-6 mb-6 space-y-2 text-xl max-lg:text-lg leading-relaxed">
+                        <li className="flex items-center">
+                          <FaCheck className="text-green-500 mr-2" />
+                          Tonte de pelouse et entretien du gazon
+                        </li>
+                        <li className="flex items-center">
+                          <FaCheck className="text-green-500 mr-2" />
+                          Regarnissage de Gazon
+                        </li>
+                        <li className="flex items-center">
+                          <FaCheck className="text-green-500 mr-2" />
+                          Scarification et traitement des pelouses
+                        </li>
+                      </ul>
+
+                      <div className="flex justify-center items-center   ">
+                        <img
+                          src={Pelouse}
+                          className="max-w-xs  rounded-xl"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* Moyens Matériels et Outils Section */}
+              <div className="mb-8 bg-white shadow-lg rounded-lg overflow-hidden">
+                <h3
+                  className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 flex items-center cursor-pointer bg-gray-200 p-4 rounded-t-lg hover:bg-gray-300 transition-colors duration-300"
+                  onClick={() => toggleSection("Entretien")}
+                >
+                  <span className="mr-2 text-yellow-500">
+                    {openSection === "Entretien" ? <FaMinus /> : <FaPlus />}
+                  </span>
+                  Entretien de jardin
+                </h3>
+                <div
+                  className={`transition-max-height duration-500 ease-in-out overflow-hidden ${
+                    openSection === "Entretien" ? "max-h-screen p-4" : "max-h-0"
+                  }`}
+                >
+                  {openSection === "Entretien" && (
+                    <div className="flex flex-col lg:flex-row gap-9 items-center max-lg:flex-col-reverse lg:justify-between">
+                      <ul className="flex flex-col pl-6 mb-6 space-y-2 text-xl max-lg:text-lg leading-relaxed">
+                        <li className="flex items-center">
+                          <FaCheck className="text-green-500 mr-2   " />
+                          Débroussaillage léger
+                        </li>
+                        <li className="flex items-center  ">
+                          <FaCheck className="text-green-500 mr-2" />
+                          Bêchage, binage et griffage{" "}
+                        </li>
+                        <li className="flex items-center">
+                          <FaCheck className="text-green-500 mr-2" />
+                          Conseils et plantation de plants et fleurs
+                        </li>
+                        <li className="flex items-center">
+                          <FaCheck className="text-green-500 mr-2" />
+                          Désherbage
+                        </li>
+                        <li className="flex items-center">
+                          <FaCheck className="text-green-500 mr-2" />
+                          Entretien des massifs
+                        </li>
+                        <li className="flex items-center">
+                          <FaCheck className="text-green-500 mr-2" />
+                          Arrosage manuel des végétaux
+                        </li>
+                      </ul>
+
+                      <div className="flex justify-center items-center">
+                        <img
+                          src={image2}
+                          className="rounded-xl max-w-xs  "
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              <div className="mb-8 bg-white shadow-lg rounded-lg overflow-hidden">
+                <h3
+                  className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 flex items-center cursor-pointer bg-gray-200 p-4 rounded-t-lg hover:bg-gray-300 transition-colors duration-300"
+                  onClick={() => toggleSection("Ramassage")}
+                >
+                  <span className="mr-2 text-yellow-500">
+                    {openSection === "Ramassage" ? <FaMinus /> : <FaPlus />}
+                  </span>
+                  Ramassage des feuilles
+                </h3>
+                <div
+                  className={`transition-max-height duration-500 ease-in-out overflow-hidden ${
+                    openSection === "Ramassage" ? "max-h-screen p-4" : "max-h-0"
+                  }`}
+                >
+                  {openSection === "Ramassage" && (
+                    <div className="flex flex-col lg:flex-row gap-9 items-center max-lg:flex-col-reverse lg:justify-between">
+                      <ul className="flex flex-col pl-6 mb-6 space-y-2 text-xl max-lg:text-lg leading-relaxed">
+                        <li className="flex items-center">
+                          <FaCheck className="text-green-500 mr-2   " />
+                          Entretien des balcons
+                        </li>
+                        <li className="flex items-center  ">
+                          <FaCheck className="text-green-500 mr-2" />
+                          Entretien et démoussage des allées et des terrasses
+                        </li>
+                        <li className="flex items-center">
+                          <FaCheck className="text-green-500 mr-2" />
+                          Enlèvement des déchets et des végétaux
+                        </li>
+                      </ul>
+
+                      <div className="flex justify-center items-center">
+                        <img
+                          src={Ramassage}
+                          className="rounded-xl  max-w-xs  "
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
-      </div>
-    </section>
+      </div>{" "}
+      <SliderAnimated />
+    </div>
   );
 };
 

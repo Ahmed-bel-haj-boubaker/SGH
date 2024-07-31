@@ -7,12 +7,12 @@ import logo3 from "../../public/images/google.png";
 import logo4 from "../../public/images/gmail.png";
 import logo5 from "../../public/images/bot.png";
 import logo6 from "../../public/images/rm.png";
-
+import logo7 from "../../public/images/microsoft.png";
 const PartnerSlider = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 400,
     slidesToShow: 6,
     slidesToScroll: 1,
     autoplay: true,
@@ -39,7 +39,7 @@ const PartnerSlider = () => {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
           dots: false,
         },
@@ -53,6 +53,7 @@ const PartnerSlider = () => {
     { id: 4, logo: logo4 },
     { id: 5, logo: logo5 },
     { id: 6, logo: logo6 },
+    { id: 7, logo: logo7 },
   ];
 
   return (

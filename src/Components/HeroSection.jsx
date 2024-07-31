@@ -1,16 +1,30 @@
 import { Link } from "react-router-dom";
-import image from "../../public/images/disinfectant_hygiene.png";
+import image from "../../public/images/jardinage.jpg";
+import image2 from "../../public/images/nettoyage.jpg";
+import image3 from "../../public/images/entreprise-societe-nettoyage-tunisie.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="dark:text-gray-800 bg-slate-200">
-      <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
-        <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
-          <img
-            src={image}
-            alt="desinfection"
-            className="object-contain  sm:h-80 lg:h-96 xl:h-112 2xl:h-128"
-          />
+    <section className="dark:text-gray-800 bg-slate-200  p-9">
+      <div className="container flex flex-col justify-center mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
+        <div className="flex items-center justify-center   mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
+          <div className="relative">
+            <img
+              src={image2}
+              alt="desinfection"
+              className="sm:w-80 sm:h-80 lg:h-[50vh] lg:w-[50vh] animate-float rounded-xl "
+            />
+            <img
+              src={image}
+              alt="desinfection"
+              className="absolute top-[-50px] left-[35vh] w-40 h-40 sm:w-40 sm:h-40 lg:h-[30vh] lg:w-[30vh]  rounded-xl animate-pulse max-lg:hidden"
+            />
+            <img
+              src={image3}
+              alt="desinfection"
+              className="absolute bottom-[-10vh] right-[30vh] w-40 h-40 sm:w-40 sm:h-40 lg:h-[30vh] lg:w-[30vh]  rounded-xl animate-pulse max-lg:hidden"
+            />
+          </div>
         </div>
         <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
           <h1 className="lg:text-4xl max-lg:text-4xl font-bold leading-none">
@@ -18,7 +32,7 @@ const HeroSection = () => {
             <span className="dark:text-green-600"> Forts</span>
           </h1>
           <ul className="mt-6 mb-8 text-lg sm:mb-12 list-disc list-inside space-y-2 ">
-            <li className="flex items-center text-2xl">
+            <li className="flex items-center text-2xl  leading-relaxed">
               <svg
                 className="size-24 text-teal-500 mr-2"
                 fill="none"

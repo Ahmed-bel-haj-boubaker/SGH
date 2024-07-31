@@ -6,7 +6,9 @@ import {
   faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import emailjs from "emailjs-com";
-
+import Banner from "./Banner";
+import bg from "../../public/images/pexels-photo-1097930.jpeg";
+import bg2 from "../../public/images/bgContact.jpg";
 const ContactUs = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -59,14 +61,13 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="bg-gray-100 py-10">
+    <div className="bg-gray-100 py-10"  style={{ backgroundImage: `url('${bg2}')` }}>
+      <Banner title={"Contactez-nous"} image={bg} />
       <section className="container mx-auto my-10 px-5">
-        <h2 className="text-4xl font-bold text-center mb-10">Contactez-nous</h2>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* Contact Form */}
-          <div className="bg-white p-8 rounded-lg shadow-md">
-            <h3 className="text-2xl font-semibold mb-4">
+          <div className="bg-white p-8 rounded-lg shadow-md font-poppins">
+            <h3 className="text-2xl font-semibold mb-4 ">
               Envoyez-nous un message
             </h3>
             <form onSubmit={handleSubmit}>
@@ -133,7 +134,7 @@ const ContactUs = () => {
           </div>
 
           {/* Company Details */}
-          <div className="bg-white p-8 rounded-lg shadow-md">
+          <div className="bg-white p-8 rounded-lg shadow-md font-poppins">
             <h3 className="text-2xl font-semibold mb-4">Nos Coordonnées</h3>
             <p className="text-gray-700 mb-2">
               <FontAwesomeIcon
@@ -162,7 +163,7 @@ const ContactUs = () => {
       </section>
 
       {/* Map Section */}
-      <section className="container mx-auto my-10 px-5">
+      <section className="container mx-auto my-10 px-5 font-poppins">
         <div className="bg-white p-8 rounded-lg shadow-md">
           <h3 className="text-2xl font-semibold mb-4 text-center">
             Notre Localisation

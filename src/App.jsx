@@ -12,6 +12,7 @@ import GoodPoints from "./Components/GoodPoints";
 import ContactUs from "./Components/contactUs";
 import { useEffect } from "react";
 import ChatBot from "./Pages/Chatbot/ChatBot";
+import Error404 from "./Components/Error404";
 
 function App() {
   const ScrollToTop = () => {
@@ -107,7 +108,8 @@ function App() {
               <ContactUs />
             </Layout>
           }
-        />
+        />{" "}
+        <Route path="*" element={<Error404 />} />
       </Routes>
     </>
   );

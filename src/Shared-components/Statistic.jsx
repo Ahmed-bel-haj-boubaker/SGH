@@ -30,10 +30,10 @@ const Statistic = () => {
       <div className="bg-white py-16 pt-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl ">
               SGH - Société Générale d'Hygiène
             </h2>
-            <p className="mt-3 text-xl text-gray-500 sm:mt-4">
+            <p className="mt-3 text-xl text-gray-500 sm:mt-4 font-poppins">
               SGH offre des services de nettoyage professionnels et de haute
               qualité sur tout le territoire tunisien.
             </p>
@@ -45,15 +45,15 @@ const Statistic = () => {
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="max-w-4xl mx-auto">
                 <dl className="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3">
-                  <div className="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
-                    <dt className="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
+                  <div className="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r font-poppins">
+                    <dt className="order-2 mt-2 text-lg leading-6 font-medium text-gray-500 ">
                       Projets réalisés
                     </dt>
                     <dd className="order-1 text-5xl font-extrabold text-gray-700">
                       {projects}+
                     </dd>
                   </div>
-                  <div className="flex flex-col border-t border-b border-gray-100 p-6 text-center sm:border-0 sm:border-l sm:border-r">
+                  <div className="flex flex-col border-t border-b border-gray-100 p-6 text-center sm:border-0 sm:border-l sm:border-r font-poppins">
                     <dt className="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
                       Taux de satisfaction
                     </dt>
@@ -61,7 +61,7 @@ const Statistic = () => {
                       {satisfaction}%
                     </dd>
                   </div>
-                  <div className="flex flex-col border-t border-gray-100 p-6 text-center sm:border-0 sm:border-l">
+                  <div className="flex flex-col border-t border-gray-100 p-6 text-center sm:border-0 sm:border-l font-poppins">
                     <dt className="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
                       Nouveaux clients par mois
                     </dt>

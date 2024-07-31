@@ -4,11 +4,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faFileAlt } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { FaMapMarkerAlt, FaEnvelope, FaPhone, FaFax } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <>
-      <footer className="relative py-10 bg-black px-4 md:px-36 overflow-hidden">
+      <footer className="relative  bg-black  overflow-hidden pt-2">
         <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <img src={Logo} alt="" className="h-56 w-56" />
           <div>
@@ -66,7 +67,7 @@ const Footer = () => {
           <p className="text-black">Content below the line.</p>
         </div>
 
-        <div className="mt-8 flex justify-center gap-4">
+        <div className="mt-3 flex justify-center gap-4">
           <a
             href="https://www.facebook.com/sghibtissem/"
             className="text-white hover:text-gray-400"
@@ -80,7 +81,7 @@ const Footer = () => {
             <FontAwesomeIcon icon={faInstagram} size="2x" />
           </a>
         </div>
-        <div className="absolute top-0 right-3 mt-8 flex justify-center items-center gap-4 md:gap-2 md:flex-col md:items-center  max-lg:hidden">
+        {/* <div className="absolute top-0 right-3 mt-8 flex justify-center items-center gap-4 md:gap-2 md:flex-col md:items-center  max-lg:hidden">
           <a
             href="tel:+21626260074"
             className="flex items-center bg-green-600 text-white px-6 py-3 rounded-full shadow-md hover:bg-green-700 transition duration-300"
@@ -97,6 +98,22 @@ const Footer = () => {
             </div>
             <span className="font-semibold">Demande de devis</span>
           </button>
+        </div> */}
+        <div className="bg-white py-3 mt-1">
+          <div className="font-poppins flex justify-between px-6 max-lg:flex-col max-lg:items-center max-lg:text-center">
+            <div className="flex items-start">
+              © Copyright SGH: Société Générale d'Hygiène
+            </div>
+            <div className="flex items-end max-lg:flex-col max-lg:items-center">
+              Création & référencement site web par
+              <a
+                href="https://www.linkedin.com/in/ahmed-belhaj-boubaker-2174701a4/"
+                className="ml-1 text-blue-500 hover:underline   "
+              >
+                Ahmed Bel Haj Boubaker
+              </a>
+            </div>
+          </div>
         </div>
       </footer>
     </>

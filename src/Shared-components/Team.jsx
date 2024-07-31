@@ -47,7 +47,7 @@ const Team = () => {
 
   const displayedMembers = showAll ? teamMembers : teamMembers.slice(0, 3);
   return (
-    <div className="bg-gray-50 mb-6">
+    <div className="bg-gray-50 mb-6 pb-1 ">
       <section className="container mx-auto px-4 mb-16 flex flex-col items-center">
         <h2 className="text-4xl font-bold text-center mb-12 mt-5">
           Nos Services

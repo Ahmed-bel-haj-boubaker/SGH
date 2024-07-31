@@ -1,5 +1,7 @@
+import Banner from "../../Components/Banner";
+import Désinsectisations from "../../../public/images/desinsectisation.png";
 const Désinsectisation = () => {
-  return <div>Désinsectisation</div>;
+  return  <Banner title={"Désinsectisation"} image={Désinsectisations}  />
 };
 
 export default Désinsectisation;
