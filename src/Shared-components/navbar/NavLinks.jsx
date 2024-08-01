@@ -33,10 +33,10 @@ const NavLinks = ({ onClick }) => {
               </span>
             </h1>
             {link.submenu && (
-              <div className="relative   md:-ml-20">
-                <div className="absolute top-full  left-0  hidden group-hover:block bg-[#F9F9F9] border border-[#E5E7EB] shadow-2xl  ">
+              <div className="relative md:-ml-20 group max-lg:hidden">
+                <div className="absolute top-full left-0 hidden group-hover:block bg-[#F9F9F9] border border-[#E5E7EB] shadow-2xl">
                   <div className="py-3">
-                    <div className="w-4 h-4 left-3 absolute -top-2 bg-[#F9F9F9] rotate-45 border-t border-l border-[#E5E7EB]  md:ml-36"></div>
+                    <div className="w-4 h-4 left-3 absolute -top-2 bg-[#F9F9F9] rotate-45 border-t border-l border-[#E5E7EB] md:ml-36"></div>
                   </div>
                   <div className="p-5 grid gap-4 ">
                     {link.sublinks.map((sublink, index) => (

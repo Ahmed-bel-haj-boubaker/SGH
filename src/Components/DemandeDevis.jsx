@@ -86,7 +86,7 @@ const DemandeDevis = () => {
     <div className="bg-blue-500 ">
       {" "}
       <div className="flex justify-center items-center  lg:mr-80 lg:ml-96 max-lg:flex-col-reverse mt-2">
-        <div className="flex items-center justify-center  p-4  mt-5 ">
+        <div className="flex items-center justify-center  p-4  mt-5  mb-6 ">
           <ToastContainer />
 
           <div className="bg-white rounded-lg shadow-2xl p-8 w-full max-w-lg border border-primary">
@@ -162,7 +162,10 @@ const DemandeDevis = () => {
           </div>
         </div>
       </div>{" "}
-      <SliderAnimated />
+      <div className="mt-5">
+        {" "}
+        <SliderAnimated />
+      </div>
     </div>
   );
 };

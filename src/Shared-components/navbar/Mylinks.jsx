@@ -1,7 +1,6 @@
 export const links = [
   {
     name: "Service",
-    submenu: true,
     sublinks: [
       { Head: "Dératisation", to: "/Dératisation" },
       { Head: "Désinsectisation", to: "/Désinsectisation" },
@@ -9,5 +8,7 @@ export const links = [
       { Head: "Travaux de jardinage", to: "/Jardinage" },
       { Head: "Service de nettoyage", to: "/ServiceNetoyage" },
     ],
+
+    submenu: true,
   },
 ];

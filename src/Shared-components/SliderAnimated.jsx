@@ -13,8 +13,8 @@ const SliderAnimated = () => {
             <div className="absolute inset-0 bg-blue-700 transition-transform duration-500 ease-out scale-x-0 group-hover:scale-x-100 origin-left"></div>
           </button>
         </div>
-        <h2 className="text-3xl font-extrabold text-gray-800">
-          <span className="bg-black text-white px-2">ILS NOUS ONT FAIT</span>{" "}
+        <h2 className="text-2xl font-extrabold text-gray-800">
+          <span className="bg-black text-white px-2 text-3xl" >ILS NOUS ONT FAIT</span>{" "}
           CONFIANCE
         </h2>
       </div>

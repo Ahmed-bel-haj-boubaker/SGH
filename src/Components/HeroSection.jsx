@@ -31,10 +31,10 @@ const HeroSection = () => {
             Nos Points
             <span className="text-green-600"> Forts</span>
           </h1>
-          <ul className="mt-6 mb-8 text-base sm:text-lg sm:mb-12 list-disc list-inside space-y-2 font-poppins">
-            <li className="flex items-center text-lg sm:text-xl">
+          <ul className="mt-6 mb-8 text-base sm:text-lg sm:mb-12 list-disc list-inside space-y-2 font-poppins lowercase">
+            <li className="flex items-center text-base sm:text-lg lg:text-xl">
               <svg
-                className="size-16 text-teal-500 mr-2"
+                className="w-5 h-5 text-teal-500 mr-2"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -47,12 +47,11 @@ const HeroSection = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              Une qualité de produits constante, avec des fiches techniques et
-              des FDS.
+              LA COMPÉTENCE PROFESSIONNELLE
             </li>
-            <li className="flex items-center text-lg sm:text-xl">
+            <li className="flex items-center text-base sm:text-lg lg:text-xl">
               <svg
-                className="size-16 text-teal-500 mr-2"
+                className="w-5 h-5 text-teal-500 mr-2"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -65,10 +64,44 @@ const HeroSection = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              Le respect des normes en vigueur et une stricte application des
-              réglementations.
+              LA MAÎTRISE DES PRODUIS ET DES PROCESS
+            </li>
+            <li className="flex items-center text-base sm:text-lg lg:text-xl">
+              <svg
+                className="w-5 h-5 text-teal-500 mr-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+              ACCÈS AUX MEILLEURS PRODUITS DU MARCHÉ
+            </li>
+            <li className="flex items-center text-base sm:text-lg lg:text-xl">
+              <svg
+                className="w-5 h-5 text-teal-500 mr-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+              TRAÇABILITÉ ET TRANSPARENCE ADMINISTRATIVE
             </li>
           </ul>
+
           <div className="flex flex-col space-y-4 items-center justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
             <button
               type="button"

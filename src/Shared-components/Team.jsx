@@ -4,8 +4,10 @@ import Slider from "react-slick";
 import deratisation from "../../public/images/deratisation-saint-cloud-2.jpg";
 import Désinsectisation from "../../public/images/desinsectisation.png";
 import Jardinage from "../../public/images/jardinage-domicile-clean-2.jpg";
-import Désinfection from "../../public/images/desinfection.png";
 import ServiceNetoyage from "../../public/images/Nettoyage-bureau.jpg";
+import DésinfectionBg from "../../public/images/bgDef.jpg";
+import image1 from "../../public/images/deratisation.jpg";
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
@@ -19,13 +21,13 @@ const teamMembers = [
   {
     name: "Désinsectisation",
     role: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam omnis cum magnam laudantium. Ducimus vero suscipit, nisi dolorem quos officiis tenetur voluptas harum, esse obcaecati natus, autem iusto totam quasi.",
-    image: Désinsectisation,
+    image: image1,
     to: "/Désinsectisation",
   },
   {
     name: "Désinfection",
     role: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam omnis cum magnam laudantium. Ducimus vero suscipit, nisi dolorem quos officiis tenetur voluptas harum, esse obcaecati natus, autem iusto totam quasi.",
-    image: Désinfection,
+    image: DésinfectionBg,
     to: "/Désinfection",
   },
   {

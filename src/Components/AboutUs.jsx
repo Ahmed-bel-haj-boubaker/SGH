@@ -23,7 +23,7 @@ const AboutUs = () => {
       <div className="bg-slate-200">
         <section
           ref={ref1}
-          className="container mx-auto px-4 flex flex-col md:flex-row items-center mb-16"
+          className="container mx-auto px-4 flex  flex-col   items-center mb-16 p-5"
         >
           <img src={logo} alt="Logo" className="mb-6 md:mb-0 md:mr-6" />
           <motion.div
