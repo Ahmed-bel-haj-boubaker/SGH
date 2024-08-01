@@ -7,8 +7,7 @@ import {
 } from "../Config";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import bg from "../../public/images/bgContact.jpg";
-import Contact from "../Shared-components/Contact";
+
 import SliderAnimated from "../Shared-components/SliderAnimated";
 const DemandeDevis = () => {
   const [formData, setFormData] = useState({

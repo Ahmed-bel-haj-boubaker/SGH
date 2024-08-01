@@ -15,12 +15,7 @@ const AboutUs = () => {
       <div className="bg-slate-200">
         <section className="container mx-auto px-4 flex  flex-col   items-center mb-16 p-5">
           <img src={logo} alt="Logo" className="mb-6 md:mb-0 md:mr-6" />
-          <motion.div
-            className="text-center md:text-left"
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0  }}
-            transition={{ duration: 0.5 }}
-          >
+          <div className="text-center md:text-left">
             <h2 className="text-4xl font-bold mb-4 font-poppins">
               Qui nous sommes ?
             </h2>
@@ -34,7 +29,7 @@ const AboutUs = () => {
               Nous continuons à évoluer sans cesse afin de répondre à vos
               besoins.
             </p>
-          </motion.div>
+          </div>
         </section>
       </div>
 

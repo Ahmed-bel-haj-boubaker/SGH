@@ -10,12 +10,21 @@ import Banner from "./Banner";
 import bg from "../../public/images/pexels-photo-1097930.jpeg";
 import bg2 from "../../public/images/bgContact.jpg";
 import SliderAnimated from "../Shared-components/SliderAnimated";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const ContactUs = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
+  const toastOptions = {
+    position: "bottom-right",
+    autoClose: 2000,
+    pauseOnHover: true,
+    draggable: true,
+    theme: "dark",
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -52,7 +61,8 @@ const ContactUs = () => {
       )
       .then((response) => {
         console.log("SUCCESS!", response.status, response.text);
-        alert("Message sent successfully!");
+        toast.success("Message envoyer avec avec succès!", toastOptions);
+
         setFormData({ name: "", email: "", message: "" });
       })
       .catch((err) => {
@@ -63,7 +73,7 @@ const ContactUs = () => {
 
   return (
     <div>
-      {" "}
+      <ToastContainer />
       <div
         className="bg-gray-100 py-10"
         style={{ backgroundImage: `url('${bg2}')` }}

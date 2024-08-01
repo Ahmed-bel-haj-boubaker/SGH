@@ -111,7 +111,9 @@ const Navbar = () => {
             <div className="py-5">
               <div className="">
                 <div className="flex justify-between gap-5 flex-col max-w-52 max-lg:ml-14">
-                  <Buttonn />
+                  <button onClick={handleLinkClick}>
+                    <Buttonn />
+                  </button>
                 </div>
               </div>
             </div>
