@@ -20,9 +20,8 @@ const Home = () => {
         <Statistic />
         <HeroSection />
       </div>
-
-      <div className="relative overflow-hidden bg-gray-50 py-10">
-        <Testimonials />
+      <div className="mb-5 mt-11">
+        <Banner title={"Votre partenaire en nettoyage"} image={deratisation} />
       </div>
       <FeaturesSection />
       <div className="bg-white py-10">
@@ -33,11 +32,9 @@ const Home = () => {
         <Team />
       </div>
 
-      <Banner
-        text={"hfosfoseofiseofihs"}
-        title={"Votre partenaire en nettoyage"}
-        image={deratisation}
-      />
+      <div className="relative overflow-hidden bg-gray-50 py-10">
+        <Testimonials />
+      </div>
     </>
   );
 };

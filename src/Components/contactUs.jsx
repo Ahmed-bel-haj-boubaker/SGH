@@ -82,7 +82,7 @@ const ContactUs = () => {
         <section className="container mx-auto my-10 px-5">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {/* Contact Form */}
-            <div className="bg-white p-8 rounded-lg shadow-md font-poppins">
+            <div className="bg-white p-8 rounded-lg shadow-2xl font-poppins">
               <h3 className="text-2xl font-semibold mb-4 ">
                 Envoyez-nous un message
               </h3>
@@ -150,33 +150,35 @@ const ContactUs = () => {
             </div>
 
             {/* Company Details */}
-            <div className="bg-white p-8 rounded-lg shadow-md font-poppins">
-              <h3 className="text-2xl font-semibold mb-4">Nos Coordonnées</h3>
-              <p className="text-gray-700 mb-2">
+            <div className="bg-white p-8 rounded-lg shadow-2xl font-poppins">
+              <h3 className="text-3xl font-semibold mb-6 text-blue-600">
+                Nos Coordonnées
+              </h3>
+              <p className="text-gray-800 mb-4 flex items-center ">
                 <FontAwesomeIcon
                   icon={faMapMarkerAlt}
-                  className="text-blue-500 mr-2"
+                  className="text-blue-600 mr-3 size-7"
                 />
                 Adresse: Turki 8030 Grombalia GP1
               </p>
-              <p className="text-gray-700 mb-2">
+              <p className="text-gray-800 mb-4 flex items-center">
                 <FontAwesomeIcon
                   icon={faPhone}
-                  className="text-blue-500 mr-2"
+                  className="text-blue-600 mr-3 size-7"
                 />
                 GSM: 26 26 00 74 - 58 70 49 09
               </p>
-              <p className="text-gray-700 mb-2">
+              <p className="text-gray-800 mb-4 flex items-center">
                 <FontAwesomeIcon
                   icon={faPhone}
-                  className="text-blue-500 mr-2"
+                  className="text-blue-600 mr-3 size-7"
                 />
                 Tél/Fax: 72 21 41 52
               </p>
-              <p className="text-gray-700 mb-2">
+              <p className="text-gray-800 mb-4 flex items-center">
                 <FontAwesomeIcon
                   icon={faEnvelope}
-                  className="text-blue-500 mr-2"
+                  className="text-blue-600 mr-3 size-7"
                 />
                 Email: sgh.ibtissem@gmail.com
               </p>
@@ -186,7 +188,7 @@ const ContactUs = () => {
 
         {/* Map Section */}
         <section className="container mx-auto my-10 px-5 font-poppins">
-          <div className="bg-white p-8 rounded-lg shadow-md">
+          <div className="bg-white p-8 rounded-lg shadow-2xl">
             <h3 className="text-2xl font-semibold mb-4 text-center">
               Notre Localisation
             </h3>
