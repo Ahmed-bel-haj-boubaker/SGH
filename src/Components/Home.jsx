@@ -9,6 +9,7 @@ import Securite from "./Securite";
 import Banner from "./Banner";
 import deratisation from "../../public/images/nettoyage.avif";
 import SliderAnimated from "../Shared-components/SliderAnimated";
+import FeaturesSection from "../Shared-components/FeaturesSection";
 
 const Home = () => {
   return (
@@ -23,7 +24,7 @@ const Home = () => {
       <div className="relative overflow-hidden bg-gray-50 py-10">
         <Testimonials />
       </div>
-
+      <FeaturesSection />
       <div className="bg-white py-10">
         <Securite />
       </div>

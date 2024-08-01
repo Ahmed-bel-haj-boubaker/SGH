@@ -13,6 +13,7 @@ import ContactUs from "./Components/contactUs";
 import { useEffect } from "react";
 import ChatBot from "./Pages/Chatbot/ChatBot";
 import Error404 from "./Components/Error404";
+import Contact from "./Shared-components/Contact";
 
 function App() {
   const ScrollToTop = () => {
@@ -81,6 +82,7 @@ function App() {
           path="/ServiceNetoyage"
           element={
             <Layout>
+              {" "}
               <ServiceNetoyage />
             </Layout>
           }

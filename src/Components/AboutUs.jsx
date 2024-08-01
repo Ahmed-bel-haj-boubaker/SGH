@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 import Securite from "../Components/Securite";
 import bg from "../../public/images/bgContact.jpg";
 import SliderAnimated from "../Shared-components/SliderAnimated";
+import FeaturesSection from "../Shared-components/FeaturesSection";
 
 const AboutUs = () => {
   const [ref1, inView1] = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -35,16 +36,21 @@ const AboutUs = () => {
               Qui nous sommes ?
             </h2>
             <p className="text-xl text-gray-700 font-poppins">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam odio
-              harum exercitationem, corporis doloremque ea! Necessitatibus
-              blanditiis dolorem, molestias vitae nam quisquam sit est ab ullam
-              perspiciatis iste molestiae harum!
+              La société “SGH ” à su s’implanter au fils du temps comme un des
+              leaders du secteur de la 3D (Désinsectisation, Désinfection et
+              Dératisation) . Nous intervenons également pour les professionnels
+              dans tout le territoire de la Tunisie Nous vous proposons une
+              large gamme de produits et services visant à préserver ou rétablir
+              des conditions d’hygiène optimales dans vos locaux professionnels.
+              Nous continuons à évoluer sans cesse afin de répondre à vos
+              besoins.
             </p>
           </motion.div>
         </section>
       </div>
       {/* Section 2: Image and Text */}
-      <div style={{ backgroundImage: `url('${bg}')` }} className="max-lg:p-2">
+      <FeaturesSection />
+      {/* <div style={{ backgroundImage: `url('${bg}')` }} className="max-lg:p-2">
         <section
           ref={ref2}
           className="container mx-auto px-4 flex flex-col-reverse md:flex-row items-center mb-16"
@@ -73,7 +79,7 @@ const AboutUs = () => {
             />
           </div>
         </section>
-      </div>
+      </div> */}
       <div className="bg-slate-400">
         {" "}
         <Team />

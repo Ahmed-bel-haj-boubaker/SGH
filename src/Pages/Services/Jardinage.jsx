@@ -11,7 +11,6 @@ import Contact from "../../Shared-components/Contact";
 
 import { Link } from "react-router-dom";
 import SliderAnimated from "../../Shared-components/SliderAnimated";
-import FeaturesSection from "../../Shared-components/FeaturesSection";
 import Team from "../../Shared-components/Team";
 const Jardinage = () => {
   const [openSection, setOpenSection] = useState(null);
@@ -233,7 +232,6 @@ const Jardinage = () => {
       <div>
         <hr className="border-t-2 border-gray-300 my-8 w-3/4 mx-auto" />
         <Team />
-       
       </div>
       <SliderAnimated />
     </div>

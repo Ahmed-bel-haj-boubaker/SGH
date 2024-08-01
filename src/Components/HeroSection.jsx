@@ -27,14 +27,14 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
-          <h1 className="lg:text-4xl max-lg:text-4xl font-bold leading-none">
+          <h1 className="text-3xl sm:text-4xl font-bold leading-none">
             Nos Points
-            <span className="dark:text-green-600"> Forts</span>
+            <span className="text-green-600"> Forts</span>
           </h1>
-          <ul className="mt-6 mb-8 text-lg sm:mb-12 list-disc list-inside space-y-2 ">
-            <li className="flex items-center text-2xl  leading-relaxed">
+          <ul className="mt-6 mb-8 text-base sm:text-lg sm:mb-12 list-disc list-inside space-y-2 font-poppins">
+            <li className="flex items-center text-lg sm:text-xl">
               <svg
-                className="size-24 text-teal-500 mr-2"
+                className="size-16 text-teal-500 mr-2"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -50,9 +50,9 @@ const HeroSection = () => {
               Une qualité de produits constante, avec des fiches techniques et
               des FDS.
             </li>
-            <li className="flex items-center  text-2xl">
+            <li className="flex items-center text-lg sm:text-xl">
               <svg
-                className="size-24 text-teal-500 mr-2"
+                className="size-16 text-teal-500 mr-2"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -69,17 +69,10 @@ const HeroSection = () => {
               réglementations.
             </li>
           </ul>
-          <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
+          <div className="flex flex-col space-y-4 items-center justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
             <button
               type="button"
-              className="
-                py-4 px-10
-                bg-teal-500
-                hover:bg-teal-600
-                rounded
-                text-white
-                font-[poppins]
-              "
+              className="py-3 px-8 sm:py-4 sm:px-10 bg-teal-500 hover:bg-teal-600 rounded text-white font-[poppins]"
             >
               <Link to="/demandeDevis">Demande de devis</Link>
             </button>

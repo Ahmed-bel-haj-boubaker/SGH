@@ -1,43 +1,42 @@
-import React from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { TbHandFinger, TbZoomCheck } from "react-icons/tb";
+import { BsShieldFillPlus } from "react-icons/bs";
 
 const FeaturesSection = () => {
   return (
-    <div className="flex flex-col items-center justify-center bg-gray-100 py-16 font-poppins">
+    <div className="flex flex-col items-center justify-center   py-16 font-poppins ">
       <h2 className="text-4xl font-bold mb-12">
-        POURQUOI NOUS <span className="text-red-500">CHOISIR</span>
+        POURQUOI NOUS <span className="text-blue-500 text-2xl">CHOISIR</span>
       </h2>
       <div className="flex flex-wrap justify-center gap-8">
-        <div className="bg-white shadow-md rounded-lg p-8 border-2 border-red-500 flex flex-col items-center max-w-xs">
+        <div className="bg-white shadow-md rounded-lg p-8 border-2 border-blue-500 flex flex-col items-center max-w-xs">
           <div className="mb-4">
-            <img src="path-to-your-icon.png" alt="Fiabilité Icon" className="h-16 w-16" />
+            <TbZoomCheck className="size-16 text-blue-600" />
           </div>
           <h3 className="text-xl font-bold mb-4">Fiabilité</h3>
-          <p className="text-center text-gray-700">
-            Forte d’une expérience de 17 ans dans le domaine de lutte contre les nuisible,
-            GSA met à votre disposition son savoir-faire et ses compétences humaines afin
-            de répondre à vos besoins.
+          <p className="text-center text-gray-700 ">
+            Nous effectuons un diagnostic afin de cibler le problème.
           </p>
         </div>
-        <div className="bg-red-500 text-white shadow-md rounded-lg p-8 flex flex-col items-center max-w-xs">
+        <div className="bg-blue-500 text-white shadow-md rounded-lg p-8 flex flex-col items-center max-w-xs">
           <div className="mb-4">
-            <img src="path-to-your-icon.png" alt="Efficacité Icon" className="h-16 w-16" />
+            <TbHandFinger className="size-16" />
           </div>
           <h3 className="text-xl font-bold mb-4">Efficacité</h3>
           <p className="text-center">
-            GSA est certifiée et agréée par le ministère de la santé publique et n’utilise
-            que des produits homologués, respectueux de l’environnement et de vos animaux
-            domestiques.
+            Nous intervenons avec une action choc pour éradiquer le problème
+            rapidement.
           </p>
         </div>
-        <div className="bg-white shadow-md rounded-lg p-8 border-2 border-red-500 flex flex-col items-center max-w-xs">
+        <div className="bg-white shadow-md rounded-lg p-8 border-2 border-blue-500 flex flex-col items-center max-w-xs">
           <div className="mb-4">
-            <img src="path-to-your-icon.png" alt="Disponibilité Icon" className="h-16 w-16" />
+            <BsShieldFillPlus className="size-16 text-blue-600" />
           </div>
           <h3 className="text-xl font-bold mb-4">Disponibilité</h3>
           <p className="text-center text-gray-700">
-            GSA vous propose un service 7 jours/7, 24h/24 sur tout le territoire pour protéger
-            vos établissements contre les infestations nuisibles et vous garantir la qualité
-            de l’hygiène de vos locaux.
+            Nous vous conseillons et/ou effectuons une dernière action par
+            prévention pour éviter le retour du problème rencontré. Nous vous
+            proposons également des contrats d'entretien.
           </p>
         </div>
       </div>

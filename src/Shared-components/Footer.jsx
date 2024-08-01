@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <footer className="relative  bg-black  overflow-hidden pt-2">
+      <footer className="relative  bg-black  overflow-hidden pt-2 ">
         <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <img src={Logo} alt="" className="h-56 w-56" />
           <div>
@@ -99,7 +99,7 @@ const Footer = () => {
             <span className="font-semibold">Demande de devis</span>
           </button>
         </div> */}
-        <div className="bg-white py-3 mt-1">
+        <div className="bg-white py-3 mt-1  ">
           <div className="font-poppins flex justify-between px-6 max-lg:flex-col max-lg:items-center max-lg:text-center">
             <div className="flex items-start">
               © Copyright SGH: Société Générale d'Hygiène
