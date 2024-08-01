@@ -83,9 +83,9 @@ const DemandeDevis = () => {
   };
 
   return (
-    <div className="bg-blue-500 ">
+    <div>
       {" "}
-      <div className="flex justify-center items-center  lg:mr-80 lg:ml-96 max-lg:flex-col-reverse mt-2">
+      <div className="flex justify-center items-center    max-lg:flex-col-reverse mt-2 bg-blue-500 ">
         <div className="flex items-center justify-center  p-4  mt-5  mb-6 ">
           <ToastContainer />
 
@@ -161,11 +161,8 @@ const DemandeDevis = () => {
             </form>
           </div>
         </div>
-      </div>{" "}
-      <div className="mt-5">
-        {" "}
-        <SliderAnimated />
       </div>
+      <SliderAnimated />
     </div>
   );
 };

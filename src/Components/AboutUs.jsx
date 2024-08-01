@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer"; // Correct import
 
 import logo from "../../public/images/Logo.png";
 
