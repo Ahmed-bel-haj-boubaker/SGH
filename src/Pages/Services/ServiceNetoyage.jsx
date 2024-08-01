@@ -8,6 +8,7 @@ import image3 from "../../../public/images/administratifs.jpg";
 
 import { Link } from "react-router-dom";
 import SliderAnimated from "../../Shared-components/SliderAnimated";
+import Team from "../../Shared-components/Team";
 
 const ServiceNetoyage = () => {
   const [openSection, setOpenSection] = useState(null);
@@ -346,6 +347,7 @@ const ServiceNetoyage = () => {
           </section>
         </div>
       </div>{" "}
+      <Team />
       <SliderAnimated />
     </div>
   );

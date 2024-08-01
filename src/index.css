@@ -50,7 +50,12 @@
     width: 100%;
   }
 }
+.hero-section {
+  background-size: 100%;
 
+  background-position: initial;
+  transition: background-image 1s ease-in-out;
+}
 .animate-fade-in {
   animation: fadeIn 1s ease-out;
 }

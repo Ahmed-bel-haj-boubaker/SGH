@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import image1 from "../../public/images/dd.jpg";
-import image2 from "../../public/images/cc.png"; // Add more images if needed
 import image3 from "../../public/images/ee.jpg"; // Add more images if needed
 
 const Hero = () => {
-  const images = [image1, image2, image3]; // Array of images
+  const images = [image1, image3]; // Array of images
   const fullText =
     "SGH est une société de nettoyage industriel offrant des services professionnels partout en Tunisie.";
   const [displayedText, setDisplayedText] = useState("");
@@ -28,22 +27,22 @@ const Hero = () => {
   useEffect(() => {
     const imageInterval = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % images.length);
-    }, 5000); // Change image every 5 seconds
+    }, 5000);
 
     return () => clearInterval(imageInterval);
   }, [images.length]);
 
   return (
     <section
-      className="-mt-16 md:pt-40 max-lg:-mt-[26px] max-lg:py-6     transition-all duration-1000"
-      style={{ backgroundImage: `url('${images[currentImage]}')` }}
+      className="-mt-16 md:pt-40 max-lg:-mt-[26px] max-lg:py-6 transition-all duration-1000 hero-section lg:h-[80vh]  "
+      style={{ backgroundImage: `url('${images[currentImage]}') ` }}
     >
       <div className="container mx-auto lg:flex p-12">
         <div className="text-center lg:text-left lg:w-1/2">
           <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold font-poppins leading-none text-white">
             Société Générale d'Hygiène
           </h1>
-          <p className="text-xl mt-6 text-white  font-poppins">
+          <p className="text-xl mt-6 text-white font-poppins">
             {displayedText}
           </p>
           <p className="mt-8 md:mt-12">
