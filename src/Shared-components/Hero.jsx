@@ -34,21 +34,21 @@ const Hero = () => {
 
   return (
     <section
-      className="-mt-16 md:pt-40 max-lg:-mt-[26px] max-lg:py-6 transition-all duration-1000 hero-section lg:h-[80vh] max-lg:h-[55vh] "
-      style={{ backgroundImage: `url('${images[currentImage]}') ` }}
+      className="-mt-16 md:pt-40 max-lg:-mt-[26px] max-lg:py-6 transition-all duration-1000 hero-section lg:h-[80vh] max-lg:bg-cover  bg-center "
+      style={{ backgroundImage: `url('${images[currentImage]}')`,backgroundPositionX:"-10vh" }}
     >
-      <div className="container mx-auto lg:flex p-12">
+      <div className="container mx-auto flex flex-col lg:flex-row p-6 md:p-12">
         <div className="text-center lg:text-left lg:w-1/2">
-          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold font-poppins leading-none text-white">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold font-poppins leading-none text-white">
             Société Générale d'Hygiène
           </h1>
-          <p className="text-xl mt-6 text-white font-poppins">
+          <p className="text-lg sm:text-xl mt-4 sm:mt-6 text-white font-poppins">
             {displayedText}
           </p>
-          <p className="mt-8 md:mt-12">
+          <p className="mt-6 sm:mt-8 md:mt-12">
             <button
               type="button"
-              className="py-4 px-12 bg-teal-500 hover:bg-teal-600 rounded text-white font-[poppins]"
+              className="py-3 px-8 sm:py-4 sm:px-12 bg-teal-500 hover:bg-teal-600 rounded text-white font-[poppins]"
             >
               <Link to="/demandeDevis">Demande de devis</Link>
             </button>
