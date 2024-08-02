@@ -14,12 +14,11 @@ const Banner = ({ image, title }) => {
           n'hesitez pas de nous contacter
         </p>
         <button className="font-poppins border p-4 border-slate-500 hover:bg-slate-500 hover:text-white transition duration-300 ">
-          <a href="tel:+21672214152">Appelez le + (216) 72 21 41 52</a> 
+          <a href="tel:+21672214152">Appelez le + (216) 72 21 41 52</a>
         </button>
       </div>
     </div>
   );
-
 };
 
 export default Banner;

@@ -3,7 +3,6 @@ import { Layout } from "./Shared-components/Layout";
 import Home from "./Components/Home";
 import DemandeDevis from "./Components/DemandeDevis";
 import Dératisation from "./Pages/Services/Dératisation";
-import Désinfection from "./Pages/Services/Désinfection";
 import Désinsectisation from "./Pages/Services/Désinsectisation";
 import Jardinage from "./Pages/Services/Jardinage";
 import ServiceNetoyage from "./Pages/Services/ServiceNetoyage";
@@ -13,8 +12,8 @@ import ContactUs from "./Components/contactUs";
 import { useEffect, useState } from "react";
 import ChatBot from "./Pages/Chatbot/ChatBot";
 import Error404 from "./Components/Error404";
-import Contact from "./Shared-components/Contact";
 import Spinner from "./Shared-components/Spinner";
+import Desinfection from "./Pages/Services/Desinfection";
 
 function App() {
   const ScrollToTop = () => {
@@ -54,12 +53,7 @@ function App() {
         />
         <Route
           path="/Désinfection"
-          element={
-            <Layout>
-              element=
-              {<Layout>{loading ? <Spinner /> : <Désinfection />}</Layout>}
-            </Layout>
-          }
+          element={<Layout>{loading ? <Spinner /> : <Desinfection />}</Layout>}
         />
         <Route
           path="/Désinsectisation"

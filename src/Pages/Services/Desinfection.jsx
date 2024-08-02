@@ -4,17 +4,15 @@ import Ramassage from "../../../public/images/traitement-des-nuisibles-entrepris
 import Désinfections from "../../../public/images/Désinfection.jpg";
 import DésinfectionBg from "../../../public/images/bgDef.jpg";
 
-import { useState } from "react";
 import { FaCheck, FaHome, FaBuilding } from "react-icons/fa";
 import Contact from "../../Shared-components/Contact";
 
 import { Link } from "react-router-dom";
 import SliderAnimated from "../../Shared-components/SliderAnimated";
 import Team from "../../Shared-components/Team";
-const Désinfection = () => {
+const Desinfection = () => {
   return (
     <div>
-      {/* Hero Section */}
       <section
         className="relative bg-cover bg-center h-[500px] flex items-center justify-center text-center text-white"
         style={{ backgroundImage: `url(${DésinfectionBg})` }}
@@ -95,7 +93,7 @@ const Désinfection = () => {
                   </li>
                 </ul>
               </div>{" "}
-              <section className="bg-gray-100 py-12 px-6 mb-6">
+              <div className="bg-gray-100 py-12 px-6 mb-6">
                 <div className="container mx-auto text-center">
                   <h2 className="text-4xl font-bold mb-8">
                     Notre zone d’intervention
@@ -126,7 +124,7 @@ const Désinfection = () => {
                     </div>
                   </div>
                 </div>
-              </section>
+              </div>
             </div>
           </section>
         </div>
@@ -140,4 +138,4 @@ const Désinfection = () => {
   );
 };
 
-export default Désinfection;
+export default Desinfection;
