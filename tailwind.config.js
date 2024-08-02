@@ -7,6 +7,7 @@ export default {
       screens: {
         "1069px": "1069px", // Custom breakpoint
         "ipad-pro": "1024px",
+        phone: "640px",
       },
       animation: {
         "fade-in": "fadeIn 1s ease-out",

@@ -2,10 +2,11 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../../public/images/Logo.png";
 import Buttonn from "../Button/Button";
-import NavLinks from "./NavLinks";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io"; // Import icons
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false); // For desktop dropdown menu
 
   // Function to handle link click and close mobile nav
   const handleLinkClick = () => {
@@ -14,11 +15,11 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-gray-50 fixed top-0 left-0 w-full z-50 shadow-lg h-40 justify-center items-center max-lg:h-28 md:w-screen">
-        <div className="bg-black max-lg:hidden text-white text-center font-poppins ">
+      <nav className="bg-gray-50 fixed top-0 left-0 w-full z-50 shadow-xl h-40 justify-center items-center max-lg:h-28 md:w-screen">
+        <div className="bg-black max-lg:hidden text-white text-center font-poppins">
           <h1>Société Générale d'Hygiène</h1>
         </div>
-        <div className="flex items-center font-medium justify-center space-x-24 px-5 lg:px-20  lg:-mt-12 ">
+        <div className="flex items-center font-medium justify-center space-x-24 px-5 lg:px-20 lg:-mt-12">
           <div className="z-50 p-5 md:w-auto w-full flex justify-between">
             <img
               src={Logo}
@@ -32,10 +33,9 @@ const Navbar = () => {
               <ion-icon name={`${open ? "close" : "menu"}`}></ion-icon>
             </div>
           </div>
-          <ul className="md:flex hidden uppercase items-center gap-8 font-[Poppins] ">
-            <li className="relative group ">
-              <span className="absolute left-0  w-full h-[5px] bg-[#8CC53F] scale-x-0 origin-left transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
-
+          <ul className="md:flex hidden uppercase items-center gap-8 font-[Poppins]">
+            <li className="relative group">
+              <span className="absolute left-0 w-full h-[5px] bg-[#8CC53F] scale-x-0 origin-left transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
               <Link
                 to="/"
                 onClick={handleLinkClick}
@@ -44,9 +44,8 @@ const Navbar = () => {
                 Accueil
               </Link>
             </li>
-            <li className="relative group ">
-              <span className="absolute left-0  w-full h-[5px] bg-[#8CC53F] scale-x-0 origin-left transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
-
+            <li className="relative group">
+              <span className="absolute left-0 w-full h-[5px] bg-[#8CC53F] scale-x-0 origin-left transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
               <Link
                 to="/aboutus"
                 onClick={handleLinkClick}
@@ -55,10 +54,8 @@ const Navbar = () => {
                 Présentation
               </Link>
             </li>
-            <NavLinks onClick={handleLinkClick} />
-            <li className="relative group ">
-              <span className="absolute   w-full h-[5px] bg-[#8CC53F] scale-x-0 origin-left transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
-
+            <li className="relative group">
+              <span className="absolute left-0 w-full h-[5px] bg-[#8CC53F] scale-x-0 origin-left transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
               <Link
                 to="/contact"
                 onClick={handleLinkClick}
@@ -66,6 +63,69 @@ const Navbar = () => {
               >
                 Contact
               </Link>
+            </li>
+            {/* Dropdown for Services */}
+            <li className="relative group">
+              <span className="absolute left-0 w-full h-[5px] bg-[#8CC53F] scale-x-0 origin-left transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
+              <button
+                onMouseEnter={() => setDropdownOpen(!dropdownOpen)}
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+                className="py-7 px-3 inline-block flex items-center hover:text-[#8CC53F] transition duration-300 ease-in-out transform hover:scale-105"
+              >
+                Services
+                <span className="ml-2 text-xl">
+                  {dropdownOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
+                </span>
+              </button>
+              {dropdownOpen && (
+                <ul className="absolute left-0 mt-2 w-48 bg-gray-100 text-black shadow-lg rounded-md font-[Poppins] z-40">
+                  <li>
+                    <Link
+                      to="/Dératisation"
+                      onClick={handleLinkClick}
+                      className="block px-4 py-2 hover:bg-gray-200 transition duration-300"
+                    >
+                      Dératisation
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/Désinfection"
+                      onClick={handleLinkClick}
+                      className="block px-4 py-2 hover:bg-gray-200 transition duration-300"
+                    >
+                      Désinfection
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/Désinsectisation"
+                      onClick={handleLinkClick}
+                      className="block px-4 py-2 hover:bg-gray-200 transition duration-300"
+                    >
+                      Désinsectisation
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/Jardinage"
+                      onClick={handleLinkClick}
+                      className="block px-4 py-2 hover:bg-gray-200 transition duration-300"
+                    >
+                      Jardinage
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/ServiceNetoyage"
+                      onClick={handleLinkClick}
+                      className="block px-4 py-2 hover:bg-gray-200 transition duration-300"
+                    >
+                      Service de Nettoyage
+                    </Link>
+                  </li>
+                </ul>
+              )}
             </li>
           </ul>
           <div className="lg:block hidden">
@@ -97,7 +157,7 @@ const Navbar = () => {
               >
                 Présentation
               </Link>
-            </li>{" "}
+            </li>
             <li>
               <Link
                 to="/contact"
@@ -107,7 +167,67 @@ const Navbar = () => {
                 Contact
               </Link>
             </li>
-            <NavLinks onClick={handleLinkClick} />
+            {/* Mobile dropdown for Services */}
+            <li>
+              <button
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+                className="py-7 px-3 inline-block flex items-center hover:text-[#8CC53F] transition duration-300 ease-in-out transform hover:scale-105"
+              >
+                Services
+                <span className="ml-2 text-xl">
+                  {dropdownOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
+                </span>
+              </button>
+              {dropdownOpen && (
+                <ul className="bg-gray-100 text-black shadow-lg rounded-md font-[Poppins]">
+                  <li>
+                    <Link
+                      to="/Dératisation"
+                      onClick={handleLinkClick}
+                      className="block px-4 py-2 hover:bg-gray-200 transition duration-300"
+                    >
+                      Dératisation
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/Désinfection"
+                      onClick={handleLinkClick}
+                      className="block px-4 py-2 hover:bg-gray-200 transition duration-300"
+                    >
+                      Désinfection
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/Désinsectisation"
+                      onClick={handleLinkClick}
+                      className="block px-4 py-2 hover:bg-gray-200 transition duration-300"
+                    >
+                      Désinsectisation
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/Jardinage"
+                      onClick={handleLinkClick}
+                      className="block px-4 py-2 hover:bg-gray-200 transition duration-300"
+                    >
+                      Jardinage
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/ServiceNetoyage"
+                      onClick={handleLinkClick}
+                      className="block px-4 py-2 hover:bg-gray-200 transition duration-300"
+                    >
+                      Service de Nettoyage
+                    </Link>
+                  </li>
+                </ul>
+              )}
+            </li>
             <div className="py-5">
               <div className="">
                 <div className="flex justify-between gap-5 flex-col max-w-52 max-lg:ml-14">

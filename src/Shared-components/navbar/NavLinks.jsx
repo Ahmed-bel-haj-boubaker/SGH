@@ -6,24 +6,22 @@ import { IoChevronForward } from "react-icons/io5";
 const NavLinks = ({ onClick }) => {
   const [heading, setHeading] = useState("");
   const [subHeading, setSubHeading] = useState("");
+
   return (
     <>
       {links.map((link, index) => (
         <div key={index}>
-          <div className="px-3 text-left md:cursor-pointer relative group ">
+          <div className="px-3 text-left md:cursor-pointer relative group">
             <h1
-              className="py-7 flex justify-between gap-4  items-center md:pr-0 pr-5 group"
+              className="py-7 flex justify-between items-center md:pr-0 pr-5 group"
               onClick={() => {
                 heading !== link.name ? setHeading(link.name) : setHeading("");
                 setSubHeading("");
               }}
             >
-              <span className="max-lg:hidden absolute top-0 bottom-0 w-full h-[5px] bg-[#8CC53F] scale-x-0 origin-left transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
-
-              {link.name}
-
-              {/* Chevron Icon */}
-              <span className="text-xl md:hidden inline ">
+              <span className="absolute top-0 bottom-0 w-full h-[5px] bg-[#8CC53F] scale-x-0 origin-left transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
+              <span className="text-gray-800 font-semibold">{link.name}</span>
+              <span className="text-xl md:hidden inline">
                 <ion-icon
                   name={heading === link.name ? "chevron-up" : "chevron-down"}
                 ></ion-icon>
@@ -33,22 +31,22 @@ const NavLinks = ({ onClick }) => {
               </span>
             </h1>
             {link.submenu && (
-              <div className="relative md:-ml-20 group max-lg:hidden">
-                <div className="absolute top-full left-0 hidden group-hover:block bg-[#F9F9F9] border border-[#E5E7EB] shadow-2xl">
+              <div className="group phone:hidden ">
+                <div className="absolute top-full left-0 hidden  group-hover:block bg-white border border-gray-200  ">
                   <div className="py-3">
-                    <div className="w-4 h-4 left-3 absolute -top-2 bg-[#F9F9F9] rotate-45 border-t border-l border-[#E5E7EB] md:ml-36"></div>
+                    <div className="w-4 h-4 left-3 absolute -top-2 bg-white rotate-45 border-t border-l border-gray-200 md:ml-36"></div>
                   </div>
-                  <div className="p-5 grid gap-4 ">
+                  <div className="p-5 grid gap-4">
                     {link.sublinks.map((sublink, index) => (
                       <Link
                         key={index}
                         to={sublink.to}
-                        className="flex items-center py-2 px-4 rounded-lg hover:bg-[#E5E7EB] transition duration-300 ease-in-out md:w-[20vh] lg:w-[30vh] shadow-xl "
+                        className="flex items-center py-2 px-4 rounded-lg hover:bg-gray-100 transition duration-300 ease-in-out md:w-[20vh] lg:w-[30vh]  "
                       >
                         <h1 className="text-lg text-gray-800 font-[Poppins] flex-grow">
                           {sublink.Head}
                         </h1>
-                        <IoChevronForward className="text-[#4B5563]" />
+                        <IoChevronForward className="text-gray-500" />
                       </Link>
                     ))}
                   </div>
@@ -56,19 +54,17 @@ const NavLinks = ({ onClick }) => {
               </div>
             )}
           </div>
-          {/* Mobile menus */}
           <div className={`${heading === link.name ? "md:hidden" : "hidden"}`}>
-            {/* sublinks */}
             {link.sublinks.map((sublink, index) => (
               <div key={index}>
-                <div className="bg-slate-200 w-80 ">
+                <div className="bg-gray-100 w-full">
                   <h1
                     onClick={() =>
                       subHeading !== sublink.Head
                         ? setSubHeading(sublink.Head)
                         : setSubHeading("")
                     }
-                    className="py-4 pl-7 md:pr-0 flex justify-between items-center pr-5 "
+                    className="py-4 pl-7 md:pr-0 flex justify-between items-center pr-5"
                   >
                     <Link
                       to={sublink.to}
@@ -77,12 +73,23 @@ const NavLinks = ({ onClick }) => {
                     >
                       {sublink.Head}
                     </Link>
+                    <span className="text-xl md:hidden inline">
+                      <ion-icon
+                        name={
+                          subHeading === sublink.Head
+                            ? "chevron-up"
+                            : "chevron-down"
+                        }
+                      ></ion-icon>
+                    </span>
                   </h1>
                   <div
                     className={`${
                       subHeading === sublink.Head ? "md:hidden" : "hidden"
                     }`}
-                  ></div>
+                  >
+                    {/* Mobile sublinks can be added here if needed */}
+                  </div>
                 </div>
               </div>
             ))}
