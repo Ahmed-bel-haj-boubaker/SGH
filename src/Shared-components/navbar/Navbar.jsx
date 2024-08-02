@@ -54,16 +54,6 @@ const Navbar = () => {
                 Présentation
               </Link>
             </li>
-            <li className="relative group">
-              <span className="absolute left-0 w-full h-[5px] bg-[#8CC53F] scale-x-0 origin-left transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
-              <Link
-                to="/contact"
-                onClick={handleLinkClick}
-                className="py-7 px-3 inline-block hover:text-[#8CC53F] transition duration-300 ease-in-out transform hover:scale-105"
-              >
-                Contact
-              </Link>
-            </li>
             {/* Dropdown for Services */}
             <li className="relative group">
               <span className="absolute left-0 w-full h-[5px] bg-[#8CC53F] scale-x-0 origin-left transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
@@ -72,7 +62,7 @@ const Navbar = () => {
                 onClick={() => setDropdownOpen(!dropdownOpen)}
                 className="py-7 px-3 inline-block flex items-center hover:text-[#8CC53F] transition duration-300 ease-in-out transform hover:scale-105"
               >
-                Services
+                SERVICES
                 <span className="ml-2 text-xl">
                   {dropdownOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
                 </span>
@@ -126,6 +116,16 @@ const Navbar = () => {
                   </li>
                 </ul>
               )}
+            </li>{" "}
+            <li className="relative group">
+              <span className="absolute left-0 w-full h-[5px] bg-[#8CC53F] scale-x-0 origin-left transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
+              <Link
+                to="/contact"
+                onClick={handleLinkClick}
+                className="py-7 px-3 inline-block hover:text-[#8CC53F] transition duration-300 ease-in-out transform hover:scale-105"
+              >
+                Contact
+              </Link>
             </li>
           </ul>
           <div className="lg:block hidden">
