@@ -12,11 +12,11 @@ const AboutUs = () => {
   return (
     <div className="py-20">
       <AnimatedBanner title={"À PROPOS DE NOUS"} />
-      <div className="bg-slate-200">
+      <div className="bg-slate-100">
         <section className="container mx-auto px-4 flex  flex-col   items-center mb-16 p-5">
-          <img src={logo} alt="Logo" className="mb-6 md:mb-0 md:mr-6" />
+          <img src={logo} alt="Logo" className="mb-6 md:mb-0 md:mr-6 size-80 " />
           <div className="text-center md:text-left">
-            <h2 className="text-4xl font-bold mb-4 font-poppins">
+            <h2 className="text-4xl font-bold mb-4 font-poppins text-center leading-10">
               Qui nous sommes ?
             </h2>
             <p className="text-xl text-gray-700 font-poppins">

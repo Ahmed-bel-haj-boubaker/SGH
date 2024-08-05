@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import image from "../../public/images/cc.png";
 import Button from "./Button/Button";
+
 const AnimatedBanner = ({ title, text }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -12,10 +13,14 @@ const AnimatedBanner = ({ title, text }) => {
   }, []);
 
   return (
-    <div className="pl-11 pr-11 max-lg:p-0 max-lg:mt-[-22px]">
+    <div className="max-lg:p-0 max-lg:mt-[-22px]">
       <div
-        className="relative bg-cover bg-center h-96 -mt-12  mb-6  "
-        style={{ backgroundImage: `url('${image}')` }}
+        className="relative h-[32rem] -mt-12 mb-6"
+        style={{
+          backgroundImage: `url('${image}')`,
+          backgroundPositionY: "2px",
+          backgroundSize: "cover",
+        }}
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
@@ -23,8 +28,8 @@ const AnimatedBanner = ({ title, text }) => {
           <p className="text-xl mb-8 animate-fade-in animation-delay-200">
             {text}
           </p>
-          <button className="px-8 py-3  rounded-md text-white font-semibold  animate-bounce-in animation-delay-400">
-            <Button style={{ width: "0%", transition: "width 5s linear" }} />
+          <button className="px-8 py-3 rounded-md text-white font-semibold animate-bounce-in animation-delay-400">
+            <Button />
           </button>
           <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-300">
             <div

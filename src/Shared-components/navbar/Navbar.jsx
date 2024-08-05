@@ -68,48 +68,48 @@ const Navbar = () => {
                 </span>
               </button>
               {dropdownOpen && (
-                <ul className="absolute left-0 mt-2 w-48 bg-gray-100 text-black shadow-lg rounded-md font-[Poppins] z-40">
-                  <li>
+                <ul className="absolute left-0 mt-2 w-48 bg-gray-800 text-white shadow-lg rounded-lg overflow-hidden z-40 font-[Poppins]">
+                  <li className="group">
                     <Link
                       to="/Dératisation"
                       onClick={handleLinkClick}
-                      className="block px-4 py-2 hover:bg-gray-200 transition duration-300"
+                      className="block px-4 py-2 transition duration-300 ease-in-out transform hover:bg-gray-700 hover:scale-105"
                     >
                       Dératisation
                     </Link>
                   </li>
-                  <li>
+                  <li className="group">
                     <Link
                       to="/Désinfection"
                       onClick={handleLinkClick}
-                      className="block px-4 py-2 hover:bg-gray-200 transition duration-300"
+                      className="block px-4 py-2 transition duration-300 ease-in-out transform hover:bg-gray-700 hover:scale-105"
                     >
                       Désinfection
                     </Link>
                   </li>
-                  <li>
+                  <li className="group">
                     <Link
                       to="/Désinsectisation"
                       onClick={handleLinkClick}
-                      className="block px-4 py-2 hover:bg-gray-200 transition duration-300"
+                      className="block px-4 py-2 transition duration-300 ease-in-out transform hover:bg-gray-700 hover:scale-105"
                     >
                       Désinsectisation
                     </Link>
                   </li>
-                  <li>
+                  <li className="group">
                     <Link
                       to="/Jardinage"
                       onClick={handleLinkClick}
-                      className="block px-4 py-2 hover:bg-gray-200 transition duration-300"
+                      className="block px-4 py-2 transition duration-300 ease-in-out transform hover:bg-gray-700 hover:scale-105"
                     >
                       Jardinage
                     </Link>
                   </li>
-                  <li>
+                  <li className="group">
                     <Link
                       to="/ServiceNetoyage"
                       onClick={handleLinkClick}
-                      className="block px-4 py-2 hover:bg-gray-200 transition duration-300"
+                      className="block px-4 py-2 transition duration-300 ease-in-out transform hover:bg-gray-700 hover:scale-105"
                     >
                       Service de Nettoyage
                     </Link>

@@ -35,7 +35,10 @@ const Hero = () => {
   return (
     <section
       className="-mt-16 md:pt-40 max-lg:-mt-[26px] max-lg:py-6 transition-all duration-1000 hero-section lg:h-[80vh] max-lg:bg-cover  bg-center "
-      style={{ backgroundImage: `url('${images[currentImage]}')`,backgroundPositionX:"-10vh" }}
+      style={{
+        backgroundImage: `url('${images[currentImage]}')`,
+        backgroundPositionX: " 20px",
+      }}
     >
       <div className="container mx-auto flex flex-col lg:flex-row p-6 md:p-12">
         <div className="text-center lg:text-left lg:w-1/2">
