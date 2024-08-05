@@ -53,11 +53,11 @@ const Dératisation = () => {
                 SGH - Votre Expert en Dératisation
               </h2>
 
-              <div className="flex flex-row-reverse  gap-4 max-lg:flex-col ">
+              <div className="flex flex-row-reverse  gap-4 max-lg:flex-col justify-center items-center -mt-5 mb-5 p-3">
                 <img
                   src={deratisation}
                   alt=""
-                  className="rounded-3xl size-56  max-lg:w-full"
+                  className="rounded-3xl size-52  max-lg:w-60"
                 />
                 <p className="text-lg md:text-xl text-gray-700 mb-6">
                   La dératisation est un processus de contrôle et d'élimination
