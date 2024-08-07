@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import Logo from "../../../public/images/Logo.png";
 import Buttonn from "../Button/Button";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io"; // Import icons
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);

@@ -7,7 +7,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import emailjs from "emailjs-com";
 import Banner from "./Banner";
-import bg from "../../public/images/pexels-photo-1097930.jpeg";
+import bg from "../../public/images/Contact-us-page_Blog-banner.jpg";
 import bg2 from "../../public/images/bgContact.jpg";
 import SliderAnimated from "../Shared-components/SliderAnimated";
 import { toast, ToastContainer } from "react-toastify";
@@ -36,28 +36,17 @@ const ContactUs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Send email to sender (auto-reply)
-    // emailjs.send(
-    //   "service_a18f886", // Replace with your EmailJS service ID
-    //   "template_nzpezdl", // Replace with your auto-reply template ID
-    //   {
-    //     to_email: formData.email,
-    //     from_name: "SGH",
-    //     user_name: formData.name,
-    //   },
-    //   "dso5aheejXGFbLnws" // Replace with your EmailJS user ID
-    // );
 
     emailjs
       .send(
-        "service_a18f886", // Replace with your EmailJS service ID
-        "template_rtho1yb", // Replace with your EmailJS template ID
+        import.meta.env.VITE_API_EMAIL,
+        import.meta.env.VITE_TEMPLATE_ID_EMAIL,
         {
           user_email: formData.email,
           user_name: formData.name,
           message: formData.message,
         },
-        "dso5aheejXGFbLnws" // Replace with your EmailJS user ID
+        import.meta.env.VITE_USER_ID_EMAIL
       )
       .then((response) => {
         console.log("SUCCESS!", response.status, response.text);
@@ -76,7 +65,9 @@ const ContactUs = () => {
       <ToastContainer />
       <div
         className="bg-gray-100 py-10"
-        style={{ backgroundImage: `url('${bg2}')` }}
+        style={{
+          backgroundImage: `url('${bg2}') `,
+        }}
       >
         <Banner title={"Contactez-nous"} image={bg} />
         <section className="container mx-auto my-10 px-5">

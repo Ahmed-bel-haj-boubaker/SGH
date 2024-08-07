@@ -32,7 +32,7 @@ const HeroSection = () => {
             <span className="text-green-600"> Forts</span>
           </h1>
           <ul className="mt-6 mb-8 text-base sm:text-lg sm:mb-12 list-disc list-inside space-y-2 font-poppins lowercase   ">
-            <li className="flex items-center md:items-center md:justify-center text-base sm:text-lg lg:text-xl">
+            <li className="flex items-center md:items-center    text-base sm:text-lg lg:text-xl">
               <svg
                 className="w-5 h-5 text-teal-500 mr-2"
                 fill="none"
@@ -49,7 +49,7 @@ const HeroSection = () => {
               </svg>
               LA COMPÉTENCE PROFESSIONNELLE
             </li>
-            <li className="flex items-center md:items-center md:justify-center text-base sm:text-lg lg:text-xl">
+            <li className="flex items-center md:items-center   text-base sm:text-lg lg:text-xl">
               <svg
                 className="w-5 h-5 text-teal-500 mr-2"
                 fill="none"
@@ -66,7 +66,7 @@ const HeroSection = () => {
               </svg>
               LA MAÎTRISE DES PRODUIS ET DES PROCESS
             </li>
-            <li className="flex items-center md:items-center md:justify-center text-base sm:text-lg lg:text-xl">
+            <li className="flex items-center md:items-center   text-base sm:text-lg lg:text-xl">
               <svg
                 className="w-5 h-5 text-teal-500 mr-2"
                 fill="none"
@@ -83,7 +83,7 @@ const HeroSection = () => {
               </svg>
               ACCÈS AUX MEILLEURS PRODUITS DU MARCHÉ
             </li>
-            <li className="flex items-center md:items-center md:justify-center text-base sm:text-lg lg:text-xl">
+            <li className="flex items-center md:items-center   text-base sm:text-lg lg:text-xl">
               <svg
                 className="w-5 h-5 text-teal-500 mr-2 "
                 fill="none"

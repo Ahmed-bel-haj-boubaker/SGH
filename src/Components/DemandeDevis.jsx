@@ -1,10 +1,6 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
-import {
-  DEMANDE_DEVIS_SERVICE,
-  DEMANDE_DEVIS_TEMPLATE,
-  EMAIL_USER_ID,
-} from "../Config";
+
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -42,8 +38,8 @@ const DemandeDevis = () => {
 
     emailjs
       .send(
-        DEMANDE_DEVIS_SERVICE,
-        DEMANDE_DEVIS_TEMPLATE,
+        import.meta.env.VITE_API_EMAIL,
+        import.meta.env.VITE_DEMANDE_DEVIS_TEMPLATE,
         {
           nom: formData.nom,
           prenom: formData.prenom,
@@ -55,7 +51,7 @@ const DemandeDevis = () => {
           service: formData.service,
           from_name: `${formData.nom} ${formData.prenom}`,
         },
-        EMAIL_USER_ID
+        import.meta.env.VITE_USER_ID_EMAIL
       )
       .then((response) => {
         console.log("SUCCESS!", response.status, response.text);
