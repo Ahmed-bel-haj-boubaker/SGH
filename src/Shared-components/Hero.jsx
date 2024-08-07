@@ -34,15 +34,15 @@ const Hero = () => {
 
   return (
     <section
-      className="-mt-16 md:pt-40 max-lg:-mt-[26px] max-lg:py-6 transition-all duration-1000 hero-section lg:h-[80vh] max-lg:bg-cover  bg-center "
+      className="     opacity-100 -mt-16 md:pt-40 max-lg:-mt-[26px] max-lg:py-6 transition-all duration-1000 hero-section lg:h-[80vh] max-lg:bg-cover  bg-center "
       style={{
         backgroundImage: `url('${images[currentImage]}')`,
         backgroundPositionX: " 20px",
       }}
     >
-      <div className="container mx-auto flex flex-col lg:flex-row p-6 md:p-12">
-        <div className="text-center lg:text-left lg:w-1/2">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold font-poppins leading-none text-white">
+      <div className="container mx-auto flex flex-col lg:flex-row p-6 md:p-12 ">
+        <div className="text-center lg:text-left lg:w-1/2 p-5">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold font-poppins leading-none text-white ">
             Société Générale d'Hygiène
           </h1>
           <p className="text-lg sm:text-xl mt-4 sm:mt-6 text-white font-poppins">

@@ -22,17 +22,21 @@ const Navbar = () => {
           <h1>Société Générale d'Hygiène</h1>
         </div>
         <div className="flex items-center font-medium justify-center space-x-24 px-5 lg:px-20 lg:-mt-12">
-          <div className="z-50 p-5 md:w-auto w-full flex justify-between">
+          <div className="z-50 p-5 md:w-auto w-full flex justify-between items-center">
             <img
               src={Logo}
               alt="logo"
-              className="md:cursor-pointer size-48 justify-center items-center max-lg:-mt-4 max-lg:size-32"
+              className="cursor-pointer size-48 md:size-48 max-lg:size-32 max-lg:-mt-4"
             />
-            <div
-              className="text-5xl md:hidden max-lg:mt-5"
-              onClick={() => setOpen(!open)}
-            >
-              <ion-icon name={`${open ? "close" : "menu"}`}></ion-icon>
+            <div className="flex items-center md:hidden gap-4">
+              <a href="tel:+21626260074">
+                <div className="bg-green-600 text-white rounded-full p-3 flex items-center justify-center w-11">
+                  <FontAwesomeIcon icon={faPhone} className="text-xl" />
+                </div>
+              </a>
+              <div className="text-5xl" onClick={() => setOpen(!open)}>
+                <ion-icon name={`${open ? "close" : "menu"}`}></ion-icon>
+              </div>
             </div>
           </div>
           <ul className="md:flex hidden uppercase items-center gap-8 font-[Poppins]">
@@ -232,21 +236,10 @@ const Navbar = () => {
             </li>
             <div className="py-5">
               <div className="">
-                <div className="flex justify-between gap-5 flex-col max-w-52 max-lg:ml-14 pr-16">
+                <div className="flex   gap-5 flex-col max-w-52 max-lg:ml-14 pr-16">
                   <button onClick={handleLinkClick}>
                     <Buttonn />
                   </button>
-                </div>
-                <div className=" bottom-4 py-5 pr-16 md:hidden lg:hidden flex justify-center items-center gap-4">
-                  <a
-                    href="tel:+21626260074"
-                    className="flex items-center bg-green-600 text-white px-6   py-3 shadow-md hover:bg-green-700 transition duration-300 "
-                  >
-                    <div className="bg-white text-green-600 rounded-full p-3 mr-2 flex items-center justify-center w-11">
-                      <FontAwesomeIcon icon={faPhone} className="text-xl" />
-                    </div>
-                    <span className="font-semibold">+216 26260074</span>
-                  </a>
                 </div>
               </div>
             </div>
