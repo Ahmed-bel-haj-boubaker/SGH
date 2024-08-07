@@ -10,15 +10,21 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   const [isVisible, setIsVisible] = useState(true);
   const footerRef = useRef(null);
+  const buttonRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (footerRef.current) {
+      if (footerRef.current && buttonRef.current) {
         const footerRect = footerRef.current.getBoundingClientRect();
-        const footerTop = footerRect.top;
+        const buttonRect = buttonRef.current.getBoundingClientRect();
 
-        // Update visibility based on scroll position relative to footer
-        setIsVisible(footerTop > window.innerHeight);
+        // Check if the footer is within the viewport
+        const isFooterVisible = footerRect.top < window.innerHeight;
+
+        // Set button visibility based on footer visibility
+        setIsVisible(
+          !isFooterVisible || buttonRect.bottom < window.innerHeight
+        );
       }
     };
 
@@ -88,7 +94,10 @@ const Footer = () => {
           <p className="text-black">Content below the line.</p>
         </div>
         {isVisible && (
-          <div className="fixed bottom-4  left-0  md:hidden lg:hidden flex justify-center items-center gap-4">
+          <div
+            ref={buttonRef}
+            className="fixed bottom-4 left-4 md:hidden lg:hidden flex justify-center items-center gap-4"
+          >
             <a
               href="tel:+21626260074"
               className="flex items-center bg-green-600 text-white px-6 py-3 shadow-md hover:bg-green-700 transition duration-300"
