@@ -88,7 +88,7 @@ const Footer = () => {
           <p className="text-black">Content below the line.</p>
         </div>
         {isVisible && (
-          <div className="fixed bottom-4 right-4 md:hidden lg:hidden flex justify-center items-center gap-4">
+          <div className="fixed bottom-4  left-0  md:hidden lg:hidden flex justify-center items-center gap-4">
             <a
               href="tel:+21626260074"
               className="flex items-center bg-green-600 text-white px-6 py-3 shadow-md hover:bg-green-700 transition duration-300"
@@ -122,4 +122,3 @@ const Footer = () => {
 };
 
 export default Footer;
-mit
