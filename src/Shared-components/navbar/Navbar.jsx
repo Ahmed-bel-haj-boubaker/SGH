@@ -22,11 +22,11 @@ const Navbar = () => {
           <h1>Société Générale d'Hygiène</h1>
         </div>
         <div className="flex items-center font-medium justify-center space-x-24 px-5 lg:px-20 lg:-mt-12">
-          <div className="z-50 p-5 md:w-auto w-full flex justify-between items-center">
+          <div className="z-50 p-5 md:w-auto w-full flex justify-between items-center ">
             <img
               src={Logo}
               alt="logo"
-              className="cursor-pointer size-48 md:size-48 max-lg:size-32 max-lg:-mt-4"
+              className="md:cursor-pointer size-48 justify-center items-center max-lg:-mt-4 max-lg:size-32"
             />
             <div className="flex items-center md:hidden gap-4">
               <a href="tel:+21626260074">
@@ -39,6 +39,7 @@ const Navbar = () => {
               </div>
             </div>
           </div>
+
           <ul className="md:flex hidden uppercase items-center gap-8 font-[Poppins]">
             <li className="relative group">
               <span className="absolute left-0 w-full h-[5px] bg-[#8CC53F] scale-x-0 origin-left transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
