@@ -232,10 +232,21 @@ const Navbar = () => {
             </li>
             <div className="py-5">
               <div className="">
-                <div className="flex justify-between gap-5 flex-col max-w-52 max-lg:ml-14">
+                <div className="flex justify-between gap-5 flex-col max-w-52 max-lg:ml-14 pr-16">
                   <button onClick={handleLinkClick}>
                     <Buttonn />
                   </button>
+                </div>
+                <div className=" bottom-4 py-5 pr-16 md:hidden lg:hidden flex justify-center items-center gap-4">
+                  <a
+                    href="tel:+21626260074"
+                    className="flex items-center bg-green-600 text-white px-6   py-3 shadow-md hover:bg-green-700 transition duration-300 "
+                  >
+                    <div className="bg-white text-green-600 rounded-full p-3 mr-2 flex items-center justify-center w-11">
+                      <FontAwesomeIcon icon={faPhone} className="text-xl" />
+                    </div>
+                    <span className="font-semibold">+216 26260074</span>
+                  </a>
                 </div>
               </div>
             </div>
