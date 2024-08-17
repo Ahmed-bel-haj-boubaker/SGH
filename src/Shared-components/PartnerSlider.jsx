@@ -2,11 +2,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import logo1 from "../../public/images/fb.png";
-import logo2 from "../../public/images/barcelone.png";
+import logo2 from "../../public/images/aziza.png";
 import logo3 from "../../public/images/google.png";
 import logo4 from "../../public/images/gmail.png";
 import logo5 from "../../public/images/bot.png";
-import logo6 from "../../public/images/rm.png";
+import logo6 from "../../public/images/carrefour.png";
 import logo7 from "../../public/images/microsoft.png";
 const PartnerSlider = () => {
   const settings = {

@@ -75,8 +75,14 @@ const Navbar = () => {
                 </span>
               </button>
               {dropdownOpen && (
-                <ul className="absolute left-0 mt-2 w-48 bg-gray-800 text-white shadow-lg rounded-lg overflow-hidden z-40 font-[Poppins]">
-                  <li className="group">
+                <ul
+                  onMouseLeave={() => setDropdownOpen(!dropdownOpen)}
+                  className="absolute left-0 mt-2 w-48 bg-gray-800 text-white shadow-lg rounded-lg overflow-hidden z-40 font-[Poppins]"
+                >
+                  <li
+                    className="group"
+                    onClick={() => setDropdownOpen(!dropdownOpen)}
+                  >
                     <Link
                       to="/Dératisation"
                       onClick={handleLinkClick}
@@ -85,7 +91,10 @@ const Navbar = () => {
                       Dératisation
                     </Link>
                   </li>
-                  <li className="group">
+                  <li
+                    className="group"
+                    onClick={() => setDropdownOpen(!dropdownOpen)}
+                  >
                     <Link
                       to="/Désinfection"
                       onClick={handleLinkClick}
@@ -94,7 +103,10 @@ const Navbar = () => {
                       Désinfection
                     </Link>
                   </li>
-                  <li className="group">
+                  <li
+                    className="group"
+                    onClick={() => setDropdownOpen(!dropdownOpen)}
+                  >
                     <Link
                       to="/Désinsectisation"
                       onClick={handleLinkClick}
@@ -103,7 +115,10 @@ const Navbar = () => {
                       Désinsectisation
                     </Link>
                   </li>
-                  <li className="group">
+                  <li
+                    className="group"
+                    onClick={() => setDropdownOpen(!dropdownOpen)}
+                  >
                     <Link
                       to="/Jardinage"
                       onClick={handleLinkClick}
@@ -112,13 +127,16 @@ const Navbar = () => {
                       Jardinage
                     </Link>
                   </li>
-                  <li className="group">
+                  <li
+                    className="group"
+                    onClick={() => setDropdownOpen(!dropdownOpen)}
+                  >
                     <Link
                       to="/ServiceNetoyage"
                       onClick={handleLinkClick}
                       className="block px-4 py-2 transition duration-300 ease-in-out transform hover:bg-gray-700 hover:scale-105"
                     >
-                      Service de Nettoyage
+                      Nettoyage
                     </Link>
                   </li>
                 </ul>
@@ -229,7 +247,7 @@ const Navbar = () => {
                       onClick={handleLinkClick}
                       className="block px-4 py-2 hover:bg-gray-200 transition duration-300"
                     >
-                      Service de Nettoyage
+                      Nettoyage
                     </Link>
                   </li>
                 </ul>
