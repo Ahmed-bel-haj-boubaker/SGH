@@ -197,9 +197,7 @@ const ContactUs = () => {
           </div>
         </section>
       </div>
-      <div className="">
-        <SliderAnimated />
-      </div>
+  
     </div>
   );
 };

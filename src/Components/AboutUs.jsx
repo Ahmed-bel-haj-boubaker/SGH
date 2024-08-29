@@ -207,9 +207,7 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-      <section className=" mx-auto my-10 font-poppins ">
-        <SliderAnimated />
-      </section>
+      
     </div>
   );
 };

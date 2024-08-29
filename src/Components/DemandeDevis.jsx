@@ -4,7 +4,6 @@ import emailjs from "emailjs-com";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import SliderAnimated from "../Shared-components/SliderAnimated";
 const DemandeDevis = () => {
   const [formData, setFormData] = useState({
     nom: "",
@@ -48,6 +47,7 @@ const DemandeDevis = () => {
           ville: formData.ville,
           codePostal: formData.codePostal,
           telephone: formData.telephone,
+          message: formData.message,
           service: formData.service,
           from_name: `${formData.nom} ${formData.prenom}`,
         },
@@ -66,6 +66,7 @@ const DemandeDevis = () => {
           codePostal: "",
           telephone: "",
           service: "",
+          message: "",
         });
       })
       .catch((err) => {
@@ -116,7 +117,26 @@ const DemandeDevis = () => {
                     />
                   </div>
                 ))}
+                <div className="relative md:col-span-2">
+                  <label
+                    htmlFor="message"
+                    className="text-gray-700 font-medium font-poppins"
+                  >
+                    Message:
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    className="w-full mt-2 px-4 py-3 border-2 rounded-lg font-poppins border-gray-300 focus:border-primary focus:outline-none transition duration-300 placeholder-gray-400"
+                    placeholder="Entrez votre message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
               </div>
+
               <div className="relative">
                 <label
                   htmlFor="service"
@@ -157,7 +177,6 @@ const DemandeDevis = () => {
           </div>
         </div>
       </div>
-   
     </div>
   );
 };

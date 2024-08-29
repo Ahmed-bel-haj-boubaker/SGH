@@ -18,9 +18,9 @@ import {
   faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import emailjs from "emailjs-com";
-
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import NewsLetter from "./NewsLetter";
 
 const Home = () => {
   const [formData, setFormData] = useState({
@@ -28,6 +28,7 @@ const Home = () => {
     email: "",
     message: "",
   });
+  
   const toastOptions = {
     position: "bottom-right",
     autoClose: 2000,
@@ -60,21 +61,20 @@ const Home = () => {
       )
       .then((response) => {
         console.log("SUCCESS!", response.status, response.text);
-        toast.success("Message envoyer avec avec succès!", toastOptions);
-
+        toast.success("Message envoyé avec succès!", toastOptions);
         setFormData({ name: "", email: "", message: "" });
       })
       .catch((err) => {
         console.log("FAILED...", err);
-        alert("Failed to send message. Please try again.");
+        toast.error("Échec de l'envoi du message. Veuillez réessayer.", toastOptions);
       });
   };
+
   return (
     <>
       <ToastContainer />
       <div>
         <Hero />
-        {/* <SliderAnimated /> */}
         <Statistic />
         <HeroSection />
       </div>
@@ -91,6 +91,7 @@ const Home = () => {
       <div className="relative overflow-hidden bg-gray-50 py-10">
         <Testimonials />
       </div>
+      <NewsLetter />
       <section className="container mx-auto my-10 px-5 mb-11">
         <h2 className="text-4xl font-bold mb-12 text-center font-poppins">
           CONTACTEZ <span className="text-blue-500 text-2xl">NOUS</span>
@@ -99,7 +100,7 @@ const Home = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* Contact Form */}
           <div className="bg-white p-8 rounded-lg shadow-2xl font-poppins">
-            <h3 className="text-2xl font-semibold mb-4 ">
+            <h3 className="text-2xl font-semibold mb-4">
               Envoyez-nous un message
             </h3>
             <form onSubmit={handleSubmit}>
@@ -114,7 +115,7 @@ const Home = () => {
                   className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   id="name"
                   type="text"
-                  name="name" // Add name attribute
+                  name="name"
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Votre nom"
@@ -131,7 +132,7 @@ const Home = () => {
                   className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   id="email"
                   type="email"
-                  name="email" // Add name attribute
+                  name="email"
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="Votre email"
@@ -148,13 +149,13 @@ const Home = () => {
                   className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   id="message"
                   rows="5"
-                  name="message" // Add name attribute
+                  name="message"
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Votre message"
                 ></textarea>
               </div>
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-end">
                 <button
                   className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                   type="submit"
@@ -170,31 +171,31 @@ const Home = () => {
             <h3 className="text-3xl font-semibold mb-6 text-blue-600">
               Nos Coordonnées
             </h3>
-            <p className="text-gray-800 mb-4 flex items-center ">
+            <p className="text-gray-800 mb-4 flex items-center">
               <FontAwesomeIcon
                 icon={faMapMarkerAlt}
-                className="text-blue-600 mr-3 size-7"
+                className="text-blue-600 mr-3 w-6 h-6"
               />
               Adresse: Turki 8030 Grombalia GP1
             </p>
             <p className="text-gray-800 mb-4 flex items-center">
               <FontAwesomeIcon
                 icon={faPhone}
-                className="text-blue-600 mr-3 size-7"
+                className="text-blue-600 mr-3 w-6 h-6"
               />
               GSM: 26 26 00 74 - 58 70 49 09
             </p>
             <p className="text-gray-800 mb-4 flex items-center">
               <FontAwesomeIcon
                 icon={faPhone}
-                className="text-blue-600 mr-3 size-7"
+                className="text-blue-600 mr-3 w-6 h-6"
               />
               Tél/Fax: 72 21 41 52
             </p>
             <p className="text-gray-800 mb-4 flex items-center">
               <FontAwesomeIcon
                 icon={faEnvelope}
-                className="text-blue-600 mr-3 size-7"
+                className="text-blue-600 mr-3 w-6 h-6"
               />
               Email: sgh.ibtissem@gmail.com
             </p>
