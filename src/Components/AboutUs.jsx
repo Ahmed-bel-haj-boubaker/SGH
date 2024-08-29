@@ -1,9 +1,7 @@
 import logo from "../../public/images/Logo.png";
 
 import Team from "../Shared-components/Team";
-import AnimatedBanner from "../Shared-components/AnimatedBanner";
-
-import SliderAnimated from "../Shared-components/SliderAnimated";
+import image from "../../public/images/cc.png";
 import FeaturesSection from "../Shared-components/FeaturesSection";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -16,6 +14,8 @@ import emailjs from "emailjs-com";
 
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Banner from "./Banner";
+import Securite from "./Securite";
 
 const AboutUs = () => {
   const [formData, setFormData] = useState({
@@ -65,9 +65,9 @@ const AboutUs = () => {
       });
   };
   return (
-    <div className="py-20">
+    <div className=" ">
       <ToastContainer />
-      <AnimatedBanner title={"À PROPOS DE NOUS"} />
+      <Banner title={"À PROPOS DE NOUS"} image={image} />
       <div className="bg-slate-100">
         <section className="container mx-auto px-4 flex  flex-col   items-center mb-16 p-5">
           <img
@@ -97,6 +97,7 @@ const AboutUs = () => {
         {" "}
         <Team />
       </div>{" "}
+      <Securite />
       <section className="container mx-auto my-10 px-5 mb-11">
         <h2 className="text-4xl font-bold mb-12 text-center font-poppins">
           CONTACTEZ <span className="text-blue-500 text-2xl">NOUS</span>
@@ -207,7 +208,6 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-      
     </div>
   );
 };
