@@ -157,7 +157,7 @@ const DemandeDevis = () => {
           </div>
         </div>
       </div>
-      <SliderAnimated />
+   
     </div>
   );
 };

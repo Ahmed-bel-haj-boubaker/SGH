@@ -1,3 +1,4 @@
+import ChatBot from "../Pages/Chatbot/ChatBot";
 import Footer from "./Footer";
 import Navbar from "./navbar/Navbar";
 import PropTypes from "prop-types";
@@ -16,7 +17,7 @@ const Layout = ({ children }) => {
         >
           {children}
         </main>
-
+        <ChatBot />
         <Footer />
       </div>
     </>

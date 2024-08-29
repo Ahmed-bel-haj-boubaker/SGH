@@ -74,7 +74,7 @@ const Home = () => {
       <ToastContainer />
       <div>
         <Hero />
-        <SliderAnimated />
+        {/* <SliderAnimated /> */}
         <Statistic />
         <HeroSection />
       </div>

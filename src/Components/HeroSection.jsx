@@ -8,25 +8,26 @@ const HeroSection = () => {
     <section className="dark:text-gray-800 bg-slate-200  p-9">
       <div className="container flex flex-col justify-center mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
         <div className="flex items-center justify-center   mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
-          <div className="relative">
+          <div className="relative xl:flex  xl:justify-center xl:items-center ">
             <img
               src={image2}
               alt="desinfection"
-              className="sm:w-80 sm:h-80 lg:h-[50vh] lg:w-[50vh] animate-float rounded-xl "
+              className="md:size-96 md:mb-5 xl:h-[50vh] xl:w-[50vh] animate-float rounded-xl lg:size-80    "
             />
             <img
               src={image}
               alt="desinfection"
-              className="absolute top-[-50px] left-[35vh] w-40 h-40 sm:w-40 sm:h-40 lg:h-[30vh] lg:w-[30vh]  rounded-xl animate-pulse max-lg:hidden"
+              className="absolute top-[-50px] left-[35vh] lg:h-[30vh] lg:w-[30vh] rounded-xl animate-pulse hidden xl:block"
             />
+
             <img
               src={image3}
               alt="desinfection"
-              className="absolute bottom-[-10vh] right-[30vh] w-40 h-40 sm:w-40 sm:h-40 lg:h-[30vh] lg:w-[30vh]  rounded-xl animate-pulse max-lg:hidden"
+              className="absolute bottom-[-10vh] right-[30vh] pb-5 w-40 h-40 sm:w-40 sm:h-40 lg:h-[30vh] lg:w-[30vh]  rounded-xl animate-pulse hidden xl:block"
             />
           </div>
         </div>
-        <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
+        <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left md:flex md:justify-center md:items-center">
           <h1 className="text-3xl sm:text-4xl font-bold leading-none">
             Nos Points
             <span className="text-green-600"> Forts</span>

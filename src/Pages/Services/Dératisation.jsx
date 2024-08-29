@@ -266,7 +266,7 @@ const Dératisation = () => {
         <hr className="border-t-2 border-gray-300 my-8 w-3/4 mx-auto" />
         <Team />
       </div>
-      <SliderAnimated />
+       
     </div>
   );
 };

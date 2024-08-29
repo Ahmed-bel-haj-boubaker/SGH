@@ -36,8 +36,8 @@ function App() {
 
   return (
     <>
-      <ChatBot />
       <ScrollToTop />
+      <ChatBot />
       <Routes>
         <Route
           path="/"
