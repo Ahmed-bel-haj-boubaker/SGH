@@ -11,26 +11,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 import { Route, Routes, useLocation } from "react-router-dom";
 import { Layout } from "./Shared-components/Layout";
-
-import { lazy, Suspense, useEffect, useState } from "react";
+import Home from "./Components/Home";
+import DemandeDevis from "./Components/DemandeDevis";
+import Dératisation from "./Pages/Services/Dératisation";
+import Désinsectisation from "./Pages/Services/Désinsectisation";
+import Jardinage from "./Pages/Services/Jardinage";
+import ServiceNetoyage from "./Pages/Services/ServiceNetoyage";
+import AboutUs from "./Components/AboutUs";
+import GoodPoints from "./Components/GoodPoints";
+import ContactUs from "./Components/contactUs";
+import { useEffect, useState } from "react";
 import ChatBot from "./Pages/Chatbot/ChatBot";
 import Error404 from "./Components/Error404";
 import Spinner from "./Shared-components/Spinner";
-const Home = lazy(() => import("./Components/Home"));
-const DemandeDevis = lazy(() => import("./Components/DemandeDevis"));
-const Dératisation = lazy(() => import("./Pages/Services/Dératisation"));
-const Desinfection = lazy(() => import("./Pages/Services/Desinfection"));
-const Désinsectisation = lazy(() =>
-  import("./Pages/Services/Désinsectisation")
-);
-const Jardinage = lazy(() => import("./Pages/Services/Jardinage"));
-const ServiceNetoyage = lazy(() => import("./Pages/Services/ServiceNetoyage"));
-const AboutUs = lazy(() => import("./Components/AboutUs"));
-const GoodPoints = lazy(() => import("./Components/GoodPoints"));
-const ContactUs = lazy(() => import("./Components/contactUs"));
+import Desinfection from "./Pages/Services/Desinfection";
+
 function App() {
   const ScrollToTop = () => {
     const { pathname } = useLocation();
@@ -54,61 +51,53 @@ function App() {
     <>
       <ScrollToTop />
       <ChatBot />
-      <Suspense fallback={<Spinner />}>
-        <Routes>
-          <Route
-            path="/"
-            element={<Layout>{loading ? <Spinner /> : <Home />}</Layout>}
-          />
-          <Route
-            path="/demandeDevis"
-            element={
-              <Layout>{loading ? <Spinner /> : <DemandeDevis />}</Layout>
-            }
-          />
-          <Route
-            path="/Dératisation"
-            element={
-              <Layout>{loading ? <Spinner /> : <Dératisation />}</Layout>
-            }
-          />
-          <Route
-            path="/Désinfection"
-            element={
-              <Layout>{loading ? <Spinner /> : <Desinfection />}</Layout>
-            }
-          />
-          <Route
-            path="/Désinsectisation"
-            element={
-              <Layout>{loading ? <Spinner /> : <Désinsectisation />}</Layout>
-            }
-          />
-          <Route
-            path="/Jardinage"
-            element={<Layout>{loading ? <Spinner /> : <Jardinage />}</Layout>}
-          />
-          <Route
-            path="/ServiceNetoyage"
-            element={
-              <Layout>{loading ? <Spinner /> : <ServiceNetoyage />}</Layout>
-            }
-          />
-          <Route
-            path="/aboutus"
-            element={<Layout>{loading ? <Spinner /> : <AboutUs />}</Layout>}
-          />
-          <Route
-            path="/nospointfort"
-            element={<Layout>{loading ? <Spinner /> : <GoodPoints />}</Layout>}
-          />
-          <Route
-            path="/contact"
-            element={<Layout>{loading ? <Spinner /> : <ContactUs />}</Layout>}
-          />
-          <Route path="*" element={<Error404 />} />
-        </Routes>
-      </Suspense>
+      <Routes>
+        <Route
+          path="/"
+          element={<Layout>{loading ? <Spinner /> : <Home />}</Layout>}
+        />
+        <Route
+          path="/demandeDevis"
+          element={<Layout>{loading ? <Spinner /> : <DemandeDevis />}</Layout>}
+        />
+        <Route
+          path="/Dératisation"
+          element={<Layout>{loading ? <Spinner /> : <Dératisation />}</Layout>}
+        />
+        <Route
+          path="/Désinfection"
+          element={<Layout>{loading ? <Spinner /> : <Desinfection />}</Layout>}
+        />
+        <Route
+          path="/Désinsectisation"
+          element={
+            <Layout>{loading ? <Spinner /> : <Désinsectisation />}</Layout>
+          }
+        />
+        <Route
+          path="/Jardinage"
+          element={<Layout>{loading ? <Spinner /> : <Jardinage />}</Layout>}
+        />
+        <Route
+          path="/ServiceNetoyage"
+          element={
+            <Layout>{loading ? <Spinner /> : <ServiceNetoyage />}</Layout>
+          }
+        />
+        <Route
+          path="/aboutus"
+          element={<Layout>{loading ? <Spinner /> : <AboutUs />}</Layout>}
+        />
+        <Route
+          path="/nospointfort"
+          element={<Layout>{loading ? <Spinner /> : <GoodPoints />}</Layout>}
+        />
+        <Route
+          path="/contact"
+          element={<Layout>{loading ? <Spinner /> : <ContactUs />}</Layout>}
+        />{" "}
+        <Route path="*" element={<Error404 />} />
+      </Routes>
     </>
   );
 }
