@@ -43,8 +43,8 @@ const Footer = () => {
               À PROPOS DE NOUS
             </Title>
             <div className="flex flex-col gap-4 font-[Poppins]">
-              <CustomLink href="">Qui nous somme ?</CustomLink>
-              <CustomLink href="">Nos points forts et nos valeurs</CustomLink>
+              <CustomLink href="/aboutus">Qui nous somme ?</CustomLink>
+              <CustomLink href="/aboutus">Nos points forts et nos valeurs</CustomLink>
             </div>
           </div>
           <div>
@@ -52,11 +52,11 @@ const Footer = () => {
               Nos services
             </Title>
             <div className="flex flex-col gap-4 font-[Poppins]">
-              <CustomLink href="">Dératisation</CustomLink>
-              <CustomLink href="">Désinsectisation</CustomLink>
-              <CustomLink href="">Désinfection</CustomLink>
-              <CustomLink href="">Travaux de jardinage</CustomLink>
-              <CustomLink href="">Service de nettoyage</CustomLink>
+              <CustomLink href="/Dératisation">Dératisation</CustomLink>
+              <CustomLink href="/Désinsectisation">Désinsectisation</CustomLink>
+              <CustomLink href="/Désinfection">Désinfection</CustomLink>
+              <CustomLink href="/Jardinage">Travaux de jardinage</CustomLink>
+              <CustomLink href="/ServiceNetoyage">Service de nettoyage</CustomLink>
             </div>
           </div>
         </div>

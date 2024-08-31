@@ -9,7 +9,7 @@ import emailjs from "emailjs-com";
 import Banner from "./Banner";
 import bg from "../../public/images/Contact-us-page_Blog-banner.jpg";
 import bg2 from "../../public/images/bgContact.jpg";
-import SliderAnimated from "../Shared-components/SliderAnimated";
+
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const ContactUs = () => {
@@ -197,7 +197,6 @@ const ContactUs = () => {
           </div>
         </section>
       </div>
-  
     </div>
   );
 };

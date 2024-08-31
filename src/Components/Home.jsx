@@ -28,7 +28,7 @@ const Home = () => {
     email: "",
     message: "",
   });
-  
+
   const toastOptions = {
     position: "bottom-right",
     autoClose: 2000,
@@ -66,7 +66,10 @@ const Home = () => {
       })
       .catch((err) => {
         console.log("FAILED...", err);
-        toast.error("Échec de l'envoi du message. Veuillez réessayer.", toastOptions);
+        toast.error(
+          "Échec de l'envoi du message. Veuillez réessayer.",
+          toastOptions
+        );
       });
   };
 
@@ -82,11 +85,11 @@ const Home = () => {
         <Banner title={"Votre partenaire en nettoyage"} image={deratisation} />
       </div>
       <FeaturesSection />
-      <div className="bg-white py-10">
-        <Securite />
-      </div>
       <div className="bg-gray-50 py-10">
         <Team />
+      </div>{" "}
+      <div className="bg-white py-10">
+        <Securite />
       </div>
       <div className="relative overflow-hidden bg-gray-50 py-10">
         <Testimonials />

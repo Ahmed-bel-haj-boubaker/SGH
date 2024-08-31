@@ -13,6 +13,8 @@ import deratisation from "../../../public/images/deratisation-saint-cloud-2.jpg"
 import { Link } from "react-router-dom";
 import SliderAnimated from "../../Shared-components/SliderAnimated";
 import Team from "../../Shared-components/Team";
+import InstagramPost from "../../Components/InstagramPost";
+import ContactUs from "../../Components/contactUs";
 
 const Dératisation = () => {
   const [openSection, setOpenSection] = useState(null);
@@ -261,12 +263,21 @@ const Dératisation = () => {
             </div>
           </section>
         </div>
-      </div>{" "}
+      </div>
+      <div>
+        <div className=" mt-3 text-4xl font-bold text-center mb-12 font-poppins text-gray-800">
+          <h2>Gallerie</h2>
+        </div>
+        <hr className="border-t-2 border-gray-300 my-8 w-3/4 mx-auto" />
+        <div>
+          <InstagramPost />
+        </div>
+      </div>
+      <br />
       <div>
         <hr className="border-t-2 border-gray-300 my-8 w-3/4 mx-auto" />
         <Team />
       </div>
-       
     </div>
   );
 };
